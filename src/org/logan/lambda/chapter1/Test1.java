@@ -5,11 +5,7 @@ import org.logan.lambda.chapter1.model.View;
 import java.util.function.BinaryOperator;
 
 /**
- * desc: Lambda课程一 <br/>
- * 参考：<br/>
- * http://www.cnblogs.com/invoker-/p/6893688.html <br/>
- * https://blog.csdn.net/wsyw126/article/details/52645402 <br/>
- * <p>
+ * desc: Lambda课程一 -- 简单例子 <br/>
  * time: 2018/4/18 下午7:04 <br/>
  * author: 居廉 <br/>
  * since V TODO <br/>
