@@ -10,8 +10,6 @@ import java.util.stream.Stream;
 
 /**
  * desc: Lambda课程二 <br/>
- * https://blog.csdn.net/wsyw126/article/details/52645402 <br/>
- * http://www.cnblogs.com/invoker-/p/6896865.html <br/>
  * time: 2018/4/18 下午7:29 <br/>
  * author: 居廉 <br/>
  * since V TODO <br/>
