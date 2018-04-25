@@ -130,11 +130,10 @@ class TestExercises {
 	 * 统计小写字符串
 	 */
 	private static long countStringLowerCaseLetters(String message) {
-		long count = message.chars()
+		return message.chars()
 				.filter(c -> Character.isLowerCase(c))
 				//.filter(Character::isLowerCase)
 				.count();
-		return count;
 	}
 
 }
