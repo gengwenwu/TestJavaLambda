@@ -3,7 +3,11 @@ package org.logan.lambda.chapter1;
 import org.logan.lambda.chapter1.model.Album;
 import org.logan.lambda.chapter1.model.Artist;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalLong;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -30,6 +34,9 @@ class TestExercises {
 		printEmptyLine();
 
 		printTotalMembers(SampleData.getThreeArtists());
+		printEmptyLine();
+
+		mostLowCaseLetters(Arrays.asList("AbcH", "BBBBB", "aaaaaaa"));
 		printEmptyLine();
 	}
 
@@ -99,5 +106,35 @@ class TestExercises {
 		System.out.println("printTotalMembers() -> sum: " + sum + ", count:" + count);
 	}
 
+	/**
+	 * 在一个字符串集合中，找出包含最多小写字母的字符串。
+	 */
+	private static void mostLowCaseLetters(List<String> strings) {
+		System.out.println("mostLowCaseLetters() -> 集合中，最多小字母字符串是：");
+		// 使用比较器
+		Optional<String> mostLowCaseLetters1 = strings.stream()
+				.max(Comparator.comparing(TestExercises::countStringLowerCaseLetters));
+		mostLowCaseLetters1.ifPresent(it -> System.out.println("使用比较器：" + it));
+
+		// 使用数值流
+		OptionalLong optionalLong = strings.stream()
+				.mapToLong(TestExercises::countStringLowerCaseLetters)
+				.max();
+		optionalLong.ifPresent(it -> System.out.println("使用数值流：" + it));
+
+		//System.out.println("mostLowcaseLetters() -> mostLowcaseLetters1:"
+		//		+ mostLowCaseLetters1.ifPresent(it -> it));
+	}
+
+	/**
+	 * 统计小写字符串
+	 */
+	private static long countStringLowerCaseLetters(String message) {
+		long count = message.chars()
+				.filter(c -> Character.isLowerCase(c))
+				//.filter(Character::isLowerCase)
+				.count();
+		return count;
+	}
 
 }
