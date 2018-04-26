@@ -16,7 +16,7 @@ import static java.util.Arrays.asList;
  * author: 居廉 <br/>
  * since V TODO <br/>
  */
-class SampleData {
+public class SampleData {
 
 	/* 艺术家 */
 	public static final Artist johnColtrane = new Artist("John Coltrane", "US");

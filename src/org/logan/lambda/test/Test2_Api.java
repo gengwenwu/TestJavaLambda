@@ -1,5 +1,6 @@
-package org.logan.lambda.chapter1;
+package org.logan.lambda.test;
 
+import org.logan.lambda.chapter1.SampleData;
 import org.logan.lambda.chapter1.model.Artist;
 
 import java.util.Arrays;
@@ -17,7 +18,7 @@ import static org.logan.lambda.LogUtil.printEmptyLine;
  * author: 居廉 <br/>
  * since V 1.0 <br/>
  */
-class Test2 {
+class Test2_Api {
 
 	private static String[] animalsArray = {"Ant", "Bear", "Cat", "Dog", "fish", "Monkey"};
 	private static int[] numberArray = {12, 18, 22, 22, 22, 50};

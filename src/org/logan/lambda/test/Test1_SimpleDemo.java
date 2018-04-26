@@ -1,16 +1,16 @@
-package org.logan.lambda.chapter1;
+package org.logan.lambda.test;
 
 import org.logan.lambda.chapter1.model.View;
 
 import java.util.function.BinaryOperator;
 
 /**
- * desc: Lambda课程一 -- 简单例子 <br/>
+ * desc: Lambda课程 -- 简单例子 <br/>
  * time: 2018/4/18 下午7:04 <br/>
  * author: 居廉 <br/>
  * since V TODO <br/>
  */
-class Test1 {
+class Test1_SimpleDemo {
 
 	public static void main(String[] args) {
 		testHelloLambda();

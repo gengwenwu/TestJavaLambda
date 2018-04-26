@@ -1,5 +1,6 @@
-package org.logan.lambda.chapter1;
+package org.logan.lambda.test;
 
+import org.logan.lambda.chapter1.SampleData;
 import org.logan.lambda.chapter1.model.Album;
 import org.logan.lambda.chapter1.model.Artist;
 
@@ -14,13 +15,13 @@ import java.util.stream.Stream;
 import static org.logan.lambda.LogUtil.printEmptyLine;
 
 /**
- * desc: 练习题测试 <br/>
+ * desc:  Lambda课程 一 练习题测试 <br/>
  * http://www.cnblogs.com/invoker-/p/6904942.html <br/>
  * time: 2018/4/24 下午3:20 <br/>
  * author: 居廉 <br/>
  * since V 1.0 <br/>
  */
-class TestExercises {
+class Test3_Exercises {
 
 	public static void main(String[] args) {
 		System.out.println("addUp1()->" + addUp1(Stream.of(1, 2, 3, 4)));
@@ -113,12 +114,12 @@ class TestExercises {
 		System.out.println("mostLowCaseLetters() -> 集合中，最多小字母字符串是：");
 		// 使用比较器
 		Optional<String> mostLowCaseLetters1 = strings.stream()
-				.max(Comparator.comparing(TestExercises::countStringLowerCaseLetters));
+				.max(Comparator.comparing(Test3_Exercises::countStringLowerCaseLetters));
 		mostLowCaseLetters1.ifPresent(it -> System.out.println("使用比较器：" + it));
 
 		// 使用数值流
 		OptionalLong optionalLong = strings.stream()
-				.mapToLong(TestExercises::countStringLowerCaseLetters)
+				.mapToLong(Test3_Exercises::countStringLowerCaseLetters)
 				.max();
 		optionalLong.ifPresent(it -> System.out.println("使用数值流：" + it));
 
