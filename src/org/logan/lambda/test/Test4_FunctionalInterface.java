@@ -9,14 +9,14 @@ import static org.logan.lambda.LogUtil.printEmptyLine;
 
 /**
  * desc: 四大函数接口 -- 四大函数接口 <br/>
- * java8中定义了几十种的函数接口，但都是Function、Consumer、Supplier、Predicate四种函数接口的变种，
- * 大多为限制参数类型，数量。
+ * java8中定义了几十种的函数接口，
+ * 但都是Function、Consumer、Supplier、Predicate四种函数接口的变种，大多为限制参数类型，数量。
+ * 参考：http://www.cnblogs.com/invoker-/p/7709052.html
  * time: 2018/4/26 上午11:24 <br/>
- * author: 居廉 <br/>
- * since V TODO <br/>
+ * author: Logan <br/>
+ * since V 1.0 <br/>
  */
 class Test4_FunctionalInterface {
-
 
 	public static void main(String[] args) {
 		testFunctionApi();
@@ -30,7 +30,6 @@ class Test4_FunctionalInterface {
 
 		testPredicateApi();
 		printEmptyLine();
-
 	}
 
 	//========== Function接口 begin
