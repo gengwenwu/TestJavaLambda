@@ -127,7 +127,7 @@ class TestExercises {
 	}
 
 	/**
-	 * 统计小写字符串
+	 * 统计小写字符串个数
 	 */
 	private static long countStringLowerCaseLetters(String message) {
 		return message.chars()
