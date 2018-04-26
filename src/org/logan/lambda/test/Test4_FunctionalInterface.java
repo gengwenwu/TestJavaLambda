@@ -30,6 +30,7 @@ class Test4_FunctionalInterface {
 
 		testPredicateApi();
 		printEmptyLine();
+
 	}
 
 	//========== Function接口 begin
