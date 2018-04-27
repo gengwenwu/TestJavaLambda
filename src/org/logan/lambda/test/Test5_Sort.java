@@ -29,7 +29,7 @@ public class Test5_Sort {
 		System.out.println("testSimpleSort() -> ");
 		/* 正向排序 */
 		// 使用Comparator<T>函数接口
-		//userList.sort((o1, o2) -> o1.getAge() - o2.getAge());
+		userList.sort((o1, o2) -> o1.getAge() - o2.getAge());
 		// 使用comparingInt()
 		userList.sort(Comparator.comparingInt(User::getAge));
 
@@ -39,7 +39,6 @@ public class Test5_Sort {
 		// 使用comparingInt()
 		userList.sort(Comparator.comparingInt(User::getAge).reversed());
 
-
 		userList.forEach(System.out::println);
 	}
 
@@ -48,8 +47,10 @@ public class Test5_Sort {
 	 */
 	private static void testCombinationSort(List<User> userList) {
 		System.out.println("testCombinationSort() -> ");
+		/* 先按照姓名排序，然后根据年龄排序，最后按照信用排序 */
 		userList.sort(Comparator.comparing(User::getName)
-				.thenComparing(User::getAge).reversed()
+				//.thenComparing(User::getAge).reversed()
+				.thenComparing(User::getAge, ((o1, o2) -> o2 - o1)) //comparing比较器提供了重载方法,可以自定义某条属性的排序
 				.thenComparing(User::getCredits));
 		userList.forEach(System.out::println);
 	}
@@ -71,21 +72,21 @@ public class Test5_Sort {
 		private Integer age;
 		private Integer credits;
 
-		public User(String name, Integer age, Integer credits) {
+		User(String name, Integer age, Integer credits) {
 			this.name = name;
 			this.age = age;
 			this.credits = credits;
 		}
 
-		public String getName() {
+		String getName() {
 			return name;
 		}
 
-		public Integer getAge() {
+		Integer getAge() {
 			return age;
 		}
 
-		public Integer getCredits() {
+		Integer getCredits() {
 			return credits;
 		}
 
