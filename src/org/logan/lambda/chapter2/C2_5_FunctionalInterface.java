@@ -1,28 +1,28 @@
 package org.logan.lambda.chapter2;
 
+import java.util.function.BiFunction;
+import java.util.function.BinaryOperator;
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.IntPredicate;
+import java.util.function.IntToLongFunction;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import static org.logan.lambda.common.LogUtil.printEmptyLine;
 
 /**
- * desc: 四大函数接口 -- 四大函数接口 <br/>
- * java8中定义了几十种的函数接口，
- * 但都是Function、Consumer、Supplier、Predicate四种函数接口的变种，大多为限制参数类型，数量。
+ * 每一个Lambda都能通过一个特定的"函数接口"与一个"给定的类型"进行匹配。 <br/>
+ * 因此一个Lambda表达式能被应用在与其目标类型匹配的任何地方，Lambda表达式必须和函数接口的抽象函数描述一样的参数类型， <br/>
+ * 它的返回类型也必须和抽象函数的返回类型兼容，并且它能抛出的异常也仅限于在函数的描述范围中。 <br/>
+ * Java8中定义了几十种的函数接口，其中重要的6个函数接口：Predicate、Consumer、Function、Supplier、UnaryOperator、BinaryOperator。 <br/>
+ * 其它函数接口是这6个函数接口的变种，大多为限制参数类型，数量。 <br/>
  * 参考：http://www.cnblogs.com/invoker-/p/7709052.html
  * time: 2018/4/26 上午11:24 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
 class C2_5_FunctionalInterface {
-
-	// Lambda用在哪里。
-	// 每一个Lambda都能通过一个特定的"函数接口"与一个给定的类型进行匹配。
-	// 因此一个Lambda表达式能被应用在与其目标类型匹配的任何地方，Lambda表达式必须和函数接口的抽象函数描述一样的参数类型，
-	// 它的返回类型也必须和抽象函数的返回类型兼容，并且他能抛出的异常也仅限于在函数的描述范围中。
-	// Java重要的函数接口：Predicate、Consumer、Function、Supplier、UnaryOperator、BinaryOperator。
 
 	public static void main(String[] args) {
 		testFunction();
@@ -36,6 +36,18 @@ class C2_5_FunctionalInterface {
 
 		testPredicate();
 		printEmptyLine();
+
+		testIntPredicate();
+		printEmptyLine();
+
+		testIntToDoubleFunction();
+		printEmptyLine();
+
+		testBiFunction();
+		printEmptyLine();
+
+		testBiFunction();
+		testBinaryOperator();
 	}
 
 	//========== 1，Function接口 begin ==========//
@@ -55,12 +67,15 @@ class C2_5_FunctionalInterface {
 
 		/* 使用lambda表达式来表示这段行为，只要保证一个参数,一个返回值就能匹配 */
 		y = oper(x, z -> z + 3);
-		System.out.printf("testFunction() -> x= %d, y = %d \n", x, y); // 打印结果 x=1, y=2
+		System.out.printf("testFunction() -> x= %d, y = %d \n", x, y); // 打印结果 x=1, y=4
 
 		y = oper(x, z -> z * 3);
-		System.out.printf("testFunction() -> x= %d, y = %d \n", x, y); // 打印结果 x=1, y=2
+		System.out.printf("testFunction() -> x= %d, y = %d \n", x, y); // 打印结果 x=1, y=3
 	}
 
+	/**
+	 * 方法第二个参数接受一个function类型的行为,然后调用apply，对a执行这段行为。
+	 */
 	private static int oper(int a, Function<Integer, Integer> action) {
 		return action.apply(a);
 	}
@@ -80,7 +95,7 @@ class C2_5_FunctionalInterface {
 	 */
 	private static void testConsumer() {
 		Consumer<String> printString = s -> System.out.println(s);
-		printString.accept("testConsumer() -> Hello World!");
+		printString.accept("testConsumer() -> Hello World!"); //控制台输出 helloWorld!
 	}
 
 	//========== 3，Supplier begin  ==========//
@@ -92,7 +107,7 @@ class C2_5_FunctionalInterface {
 	 */
 	private static void testSupplier() {
 		Supplier<String> getInstance = () -> "Hello World!";
-		System.out.println("testSupplier() -> " + getInstance.get());
+		System.out.println("testSupplier() -> " + getInstance.get());  // 控偶值台输出 Hello World
 	}
 
 	//========== 4，Predicate Begin  ==========//
@@ -114,21 +129,53 @@ class C2_5_FunctionalInterface {
 	// IntPredicate, LongPredicate, DoublePredicate，这几个接口，都是在基于Predicate接口的，不同的就是他们的泛型类型分别变成了Integer,Long,Double。
 	// IntConsumer, LongConsumer, DoubleConsumer比如这几个，对应的就是Consumer<Integer>,Consumer<Long>,Consumer<Double>，其余的是一样的道理。
 
+	/**
+	 * 测试 {@link IntPredicate}
+	 */
+	private static void testIntPredicate() {
+		IntPredicate oddNumber = integer -> integer % 2 == 1;
+		System.out.println("testIntPredicate() 奇数？:" + oddNumber.test(2));
+	}
+
+
 	// (2)，返回值类型，和上面类似，只是命名的规则上多了一个To,例如：
-	// IntToDoubleFunction，IntToLongFunction, 很明显就是对应的Function<Integer,Double>与Function<Integer,Long>，其余同理，另外需要注意的是，
-	// 参数限制与返回值限制的命名唯一不同就是To。简单来说，前面不带To的都是参数类型限制，带To的是返回值类型限制，
-	// 对于没有参数的函数接口，那显而易见只可能是对返回值作限制。例如：
-	// LongFunction<R>就相当于Function<Long,R> 而多了一个To的ToLongFunction<T>就相当于Function<T,Long>，也就是对返回值类型作了限制。
+	// IntToDoubleFunction，IntToLongFunction, 很明显就是对应的Function<Integer,Double>与Function<Integer,Long>，其余同理。
+	// 另外需要注意的是，参数限制与返回值限制的命名唯一不同就是To。简单来说，前面不带To的都是参数类型限制，带To的是返回值类型限制。
+
+	/**
+	 * 测试 {@link IntToLongFunction}
+	 */
+	private static void testIntToDoubleFunction() {
+		IntToLongFunction function = integer -> integer + Integer.MAX_VALUE;
+		System.out.println("testIntToDoubleFunction() Integer最大值加10值为:" + function.applyAsLong(10));
+	}
+
 
 	// 2, 数量限制接口
 	// 有些接口需要接受两名参数，此类接口的所有名字前面都是附加上Bi,是Binary的缩写，开头也介绍过这个单词了，是二元的意思，
 	// 例如BiPredicate, BiFunction等等，而由于java没有多返回值的设定，所以BI指的都是参数为两个。
 
+	/**
+	 * 测试 {@link BiFunction}
+	 */
+	public static void testBiFunction() {
+		BiFunction<Integer, Long, String> addResultStr = (integer, aLong) -> "结果是:" + integer + aLong;
+		System.out.println("testBinaryOperator() :" + addResultStr.apply(1, 2L));
+	}
+
+
 	// 3, Operator接口
-	// 此类接口只有2个，分别是UnaryOperator<T>一元操作符接口，与BinaryOperator<T>二元操作符接口，
+	// 此类接口只有2个，分别是UnaryOperator<T>一元操作符接口，与BinaryOperator<T>二元操作符接口。
 	// 这类接口属于Function接口的简写，他们只有一个泛型参数，意思是Function的参数与返回值类型相同。
-	// 一般多用于操作计算，计算 a + b的BiFunction如果限制条件为Integer的话，
-	// 往往要这么写BiFunction<Integer, Integer, Integer> 前2个泛型代表参数，最后一个代表返回值，
-	// 看起来似乎是有点繁重了,这个时候就可以用BinaryOperator<Integer>来代替了。
+	// 一般多用于操作计算，计算a + b的BiFunction如果限制条件为Integer的话，往往要这么写BiFunction<Integer, Integer, Integer> 前2个泛型代表参数，
+	// 最后一个代表返回值，看起来似乎是有点繁重了,这个时候就可以用BinaryOperator<Integer>来代替了。
+
+	/**
+	 * 测试 {@link BinaryOperator}
+	 */
+	public static void testBinaryOperator() {
+		BinaryOperator<Long> addLongs = (x, y) -> x + y;
+		System.out.println("testBinaryOperator() :" + addLongs.apply(1L, 2L));
+	}
 
 }
