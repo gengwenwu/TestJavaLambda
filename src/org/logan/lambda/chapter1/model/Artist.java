@@ -7,15 +7,24 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * desc: 艺术家 <br/>
+ * desc: 音乐家或乐队  <br/>
  * time: 2018/4/19 上午11:53 <br/>
  * author: 居廉 <br/>
- * since V TODO <br/>
+ * since V 1.0 <br/>
  */
 public final class Artist {
 
+	/**
+	 * 音乐家名称
+	 */
 	private String name;
+	/**
+	 * 乐队成员
+	 */
 	private List<Artist> members;
+	/**
+	 * 所属国籍
+	 */
 	private String nationality;
 
 	public Artist(String name, String nationality) {

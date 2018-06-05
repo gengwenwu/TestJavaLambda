@@ -9,12 +9,21 @@ import java.util.stream.Stream;
  * desc: 专辑 <br/>
  * time: 2018/4/19 上午11:56 <br/>
  * author: 居廉 <br/>
- * since V TODO <br/>
+ * since V 1.0 <br/>
  */
 public final class Album implements Performance {
 
+	/**
+	 * 专辑名称
+	 */
 	private String name;
+	/**
+	 * 所有歌曲
+	 */
 	private List<Track> tracks;
+	/**
+	 * 所有艺术家
+	 */
 	private List<Artist> musicians;
 
 	public Album(String name, List<Track> tracks, List<Artist> musicians) {
