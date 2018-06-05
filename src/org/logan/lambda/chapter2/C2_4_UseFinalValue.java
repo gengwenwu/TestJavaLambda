@@ -6,7 +6,7 @@ import org.logan.lambda.common.helper.View;
 import java.util.function.BinaryOperator;
 
 /**
- * desc: 引用的是值，而不是变量 <br/>
+ * desc: Lambda限制，引用的是值，而不是变量 <br/>
  * time: 2018/5/5 上午11:24 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
