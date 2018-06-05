@@ -1,4 +1,4 @@
-package org.logan.lambda.test;
+package org.logan.lambda.chapter1;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -16,43 +16,49 @@ import static org.logan.lambda.common.LogUtil.printEmptyLine;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class Test4_FunctionalInterface {
+class C1_5_FunctionalInterface {
+
+	// Lambda用在哪里。
+	// 每一个Lambda都能通过一个特定的"函数接口"与一个给定的类型进行匹配。
+	// 因此一个Lambda表达式能被应用在与其目标类型匹配的任何地方，Lambda表达式必须和函数接口的抽象函数描述一样的参数类型，
+	// 它的返回类型也必须和抽象函数的返回类型兼容，并且他能抛出的异常也仅限于在函数的描述范围中。
+	// Java重要的函数接口：Predicate、Consumer、Function、Supplier、UnaryOperator、BinaryOperator。
 
 	public static void main(String[] args) {
-		testFunctionApi();
+		testFunction();
 		printEmptyLine();
 
-		testConsumerApi();
+		testConsumer();
 		printEmptyLine();
 
-		testSupplierApi();
+		testSupplier();
 		printEmptyLine();
 
-		testPredicateApi();
+		testPredicate();
 		printEmptyLine();
 	}
 
-	//========== Function接口 begin
+	//========== 1，Function接口 begin ==========//
 
 	/**
 	 * 测试 Function 函数接口。
 	 * Function接口：针对 接受一个T类型参数，返回R类型的结果的方法的抽象，
 	 * 通过调用apply()执行这段行为。
 	 */
-	private static void testFunctionApi() {
+	private static void testFunction() {
 		int x = 1;
 
 		// 将addOne方法作为参数传递
 		int y = oper(x, z -> addOne(z));
 		//int y = oper(x, Test4_FunctionApi::addOne);
-		System.out.printf("testFunctionApi() -> x= %d, y = %d \r\n", x, y); // 打印结果 x=1, y=2
+		System.out.printf("testFunction() -> x= %d, y = %d \r\n", x, y); // 打印结果 x=1, y=2
 
 		/* 使用lambda表达式来表示这段行为，只要保证一个参数,一个返回值就能匹配 */
 		y = oper(x, z -> z + 3);
-		System.out.printf("testFunctionApi() -> x= %d, y = %d \n", x, y); // 打印结果 x=1, y=2
+		System.out.printf("testFunction() -> x= %d, y = %d \n", x, y); // 打印结果 x=1, y=2
 
 		y = oper(x, z -> z * 3);
-		System.out.printf("testFunctionApi() -> x= %d, y = %d \n", x, y); // 打印结果 x=1, y=2
+		System.out.printf("testFunction() -> x= %d, y = %d \n", x, y); // 打印结果 x=1, y=2
 	}
 
 	private static int oper(int a, Function<Integer, Integer> action) {
@@ -63,7 +69,7 @@ class Test4_FunctionalInterface {
 		return a + 1;
 	}
 
-	//========== Consumer接口 begin
+	//========== 2，Consumer接口 begin  ==========//
 
 	/**
 	 * 测试 Consumer 函数接口 <br/>
@@ -72,24 +78,24 @@ class Test4_FunctionalInterface {
 	 * 例如最典型的forEach就是使用的Consumer接口，虽然没有任何的返回值，但是却向控制台输出了语句。
 	 * 使用accept()执行这段行为。
 	 */
-	private static void testConsumerApi() {
+	private static void testConsumer() {
 		Consumer<String> printString = s -> System.out.println(s);
-		printString.accept("testConsumerApi() -> Hello World!");
+		printString.accept("testConsumer() -> Hello World!");
 	}
 
-	//========== Supplier begin
+	//========== 3，Supplier begin  ==========//
 
 	/**
 	 * 测试 Supplier 函数接口 <br/>
 	 * 不接受参数，但是提供一个返回值，通俗的理解为这种接口是无私的奉献者，
 	 * 不仅不要参数，还返回一个值，使用get()获得这个返回值。
 	 */
-	private static void testSupplierApi() {
+	private static void testSupplier() {
 		Supplier<String> getInstance = () -> "Hello World!";
-		System.out.println("testSupplierApi() -> " + getInstance.get());
+		System.out.println("testSupplier() -> " + getInstance.get());
 	}
 
-	//========== Predicate Begin
+	//========== 4，Predicate Begin  ==========//
 
 	/**
 	 * 测试 Predicate 函数接口 <br/>
@@ -97,12 +103,12 @@ class Test4_FunctionalInterface {
 	 * 当然你可以把他理解成特殊的Function，但是为了便于区分语义，还是单独的划了一个接口。
 	 * 使用test()方法执行这段行为。
 	 */
-	private static void testPredicateApi() {
+	private static void testPredicate() {
 		Predicate<Integer> oddNumber = integer -> integer % 2 == 1;
-		System.out.println("testPredicateApi() 奇数？:" + oddNumber.test(2));
+		System.out.println("testPredicate() 奇数？:" + oddNumber.test(2));
 	}
 
-	//============ 其他的接口 begin
+	//============ 5，其他的接口 begin  ==========//
 	// 1, 类型限制接口
 	// (1)，参数类型，例如：
 	// IntPredicate, LongPredicate, DoublePredicate，这几个接口，都是在基于Predicate接口的，不同的就是他们的泛型类型分别变成了Integer,Long,Double。
@@ -124,10 +130,5 @@ class Test4_FunctionalInterface {
 	// 一般多用于操作计算，计算 a + b的BiFunction如果限制条件为Integer的话，
 	// 往往要这么写BiFunction<Integer, Integer, Integer> 前2个泛型代表参数，最后一个代表返回值，
 	// 看起来似乎是有点繁重了,这个时候就可以用BinaryOperator<Integer>来代替了。
-
-	//============ 关于lambda的限制
-	// Java8中的Lambda表达式，并不是完全闭包，lambda表达式对值封闭，不对变量封闭。
-	// 简单点来说就是局部变量在lambda表达式中如果要使用，必须是声明final类型或者是隐式的final。
-	// 为什么要这么设计,理由有很多，例如：函数的不变性，线程安全等等等。严格保证这种限制会让你的代码变得无比安全。
 
 }
