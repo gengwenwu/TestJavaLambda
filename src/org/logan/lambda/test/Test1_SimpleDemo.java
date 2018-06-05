@@ -1,6 +1,6 @@
 package org.logan.lambda.test;
 
-import org.logan.lambda.chapter1.model.View;
+import org.logan.lambda.common.model.View;
 
 import java.util.function.BinaryOperator;
 

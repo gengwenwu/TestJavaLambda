@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-import static org.logan.lambda.LogUtil.printEmptyLine;
+import static org.logan.lambda.common.LogUtil.printEmptyLine;
 
 /**
  * desc: Lambda课程 一 排序 <br/>

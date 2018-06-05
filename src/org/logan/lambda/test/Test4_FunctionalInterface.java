@@ -5,7 +5,7 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-import static org.logan.lambda.LogUtil.printEmptyLine;
+import static org.logan.lambda.common.LogUtil.printEmptyLine;
 
 /**
  * desc: 四大函数接口 -- 四大函数接口 <br/>

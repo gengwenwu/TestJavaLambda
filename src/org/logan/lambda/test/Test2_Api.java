@@ -1,7 +1,7 @@
 package org.logan.lambda.test;
 
 import org.logan.lambda.chapter1.SampleData;
-import org.logan.lambda.chapter1.model.Artist;
+import org.logan.lambda.common.model.Artist;
 
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
 
-import static org.logan.lambda.LogUtil.printEmptyLine;
+import static org.logan.lambda.common.LogUtil.printEmptyLine;
 
 /**
  * desc: Lambda课程二 -- 常用流Api <br/>

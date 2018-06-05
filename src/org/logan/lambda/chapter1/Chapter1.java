@@ -1,6 +1,6 @@
 package org.logan.lambda.chapter1;
 
-import org.logan.lambda.chapter1.model.Artist;
+import org.logan.lambda.common.model.Artist;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  * desc: TODO <br/>
  * time: 2018/4/19 下午2:18 <br/>
  * author: 居廉 <br/>
- * since V TODO <br/>
+ * since V 1.0 <br/>
  */
 public class Chapter1 extends MusicChapter {
 

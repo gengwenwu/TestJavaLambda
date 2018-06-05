@@ -1,4 +1,4 @@
-package org.logan.lambda.chapter1.model;
+package org.logan.lambda.common.model;
 
 import java.util.ArrayList;
 import java.util.Collections;

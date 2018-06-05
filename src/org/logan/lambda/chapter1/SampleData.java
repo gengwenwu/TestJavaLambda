@@ -1,8 +1,8 @@
 package org.logan.lambda.chapter1;
 
-import org.logan.lambda.chapter1.model.Album;
-import org.logan.lambda.chapter1.model.Artist;
-import org.logan.lambda.chapter1.model.Track;
+import org.logan.lambda.common.model.Album;
+import org.logan.lambda.common.model.Artist;
+import org.logan.lambda.common.model.Track;
 
 import java.util.Arrays;
 import java.util.List;

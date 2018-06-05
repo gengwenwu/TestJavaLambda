@@ -1,4 +1,4 @@
-package org.logan.lambda.chapter1.model;
+package org.logan.lambda.common.model;
 
 /**
  * desc: 歌曲 <br/>

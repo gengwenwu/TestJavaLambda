@@ -1,8 +1,8 @@
 package org.logan.lambda.test;
 
 import org.logan.lambda.chapter1.SampleData;
-import org.logan.lambda.chapter1.model.Album;
-import org.logan.lambda.chapter1.model.Artist;
+import org.logan.lambda.common.model.Album;
+import org.logan.lambda.common.model.Artist;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -12,7 +12,7 @@ import java.util.OptionalLong;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.logan.lambda.LogUtil.printEmptyLine;
+import static org.logan.lambda.common.LogUtil.printEmptyLine;
 
 /**
  * desc:  Lambda课程 一 练习题测试 <br/>
