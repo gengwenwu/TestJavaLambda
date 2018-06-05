@@ -13,7 +13,7 @@ import static java.util.Arrays.asList;
 /**
  * desc: 简单数据模拟 <br/>
  * time: 2018/4/19 下午1:40 <br/>
- * author: 居廉 <br/>
+ * author: Logan <br/>
  * since V 1.0 <br/>
  */
 public class SampleData {

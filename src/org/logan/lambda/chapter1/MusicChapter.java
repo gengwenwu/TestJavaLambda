@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * desc: TODO <br/>
  * time: 2018/4/19 下午2:18 <br/>
- * author: 居廉 <br/>
+ * author: Logan <br/>
  * since V 1.0 <br/>
  */
 public abstract class MusicChapter {

@@ -8,7 +8,7 @@ import java.util.function.BinaryOperator;
  * desc: Lambda课程 -- 简单例子 <br/>
  * time: 2018/4/18 下午7:04 <br/>
  * author: 居廉 <br/>
- * since V TODO <br/>
+ * since V 1.0 <br/>
  */
 class Test1_SimpleDemo {
 

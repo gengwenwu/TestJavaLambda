@@ -3,7 +3,7 @@ package org.logan.lambda.common.model;
 /**
  * desc: 歌曲 <br/>
  * time: 2018/4/19 上午11:49 <br/>
- * author: 居廉 <br/>
+ * author: Logan <br/>
  * since V 1.0 <br/>
  */
 public final class Track {

@@ -3,8 +3,8 @@ package org.logan.lambda.common.model;
 /**
  * desc: 模拟 android.view.View <br/>
  * time: 2018/4/18 下午7:08 <br/>
- * author: 居廉 <br/>
- * since V TODO <br/>
+ * author: Logan <br/>
+ * since V 1.0 <br/>
  */
 public class View {
 

@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 /**
  * desc: 音乐家或乐队  <br/>
  * time: 2018/4/19 上午11:53 <br/>
- * author: 居廉 <br/>
+ * author: Logan <br/>
  * since V 1.0 <br/>
  */
 public final class Artist {

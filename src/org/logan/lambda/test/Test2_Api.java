@@ -15,7 +15,7 @@ import static org.logan.lambda.common.LogUtil.printEmptyLine;
 /**
  * desc: Lambda课程二 -- 常用流Api <br/>
  * time: 2018/4/18 下午7:29 <br/>
- * author: 居廉 <br/>
+ * author: Logan <br/>
  * since V 1.0 <br/>
  */
 class Test2_Api {
