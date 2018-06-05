@@ -1,4 +1,4 @@
-package org.logan.lambda.common.model;
+package org.logan.lambda.common.helper;
 
 /**
  * desc: 模拟 android.view.View <br/>
