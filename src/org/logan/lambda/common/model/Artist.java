@@ -23,7 +23,7 @@ public final class Artist {
 	 */
 	private List<Artist> members;
 	/**
-	 * 所属国籍
+	 * 所属国籍、籍贯
 	 */
 	private String nationality;
 

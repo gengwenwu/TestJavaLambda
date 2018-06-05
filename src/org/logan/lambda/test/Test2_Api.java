@@ -1,6 +1,6 @@
 package org.logan.lambda.test;
 
-import org.logan.lambda.chapter1.SampleData;
+import org.logan.lambda.common.SampleData;
 import org.logan.lambda.common.model.Artist;
 
 import java.util.Arrays;
