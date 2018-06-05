@@ -1,4 +1,4 @@
-package org.logan.lambda.chapter1;
+package org.logan.lambda.chapter2;
 
 import org.logan.lambda.common.helper.Button;
 
@@ -8,7 +8,7 @@ import org.logan.lambda.common.helper.Button;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C1_2_ButtonClickLambda {
+class C2_2_ButtonClickLambda {
 
 	public static void main(String[] args) {
 		Button button = new Button();

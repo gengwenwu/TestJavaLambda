@@ -1,4 +1,4 @@
-package org.logan.lambda.chapter1;
+package org.logan.lambda.chapter2;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -16,7 +16,7 @@ import static org.logan.lambda.common.LogUtil.printEmptyLine;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C1_5_FunctionalInterface {
+class C2_5_FunctionalInterface {
 
 	// Lambda用在哪里。
 	// 每一个Lambda都能通过一个特定的"函数接口"与一个给定的类型进行匹配。

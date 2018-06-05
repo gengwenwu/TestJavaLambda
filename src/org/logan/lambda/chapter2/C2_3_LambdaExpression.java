@@ -1,4 +1,4 @@
-package org.logan.lambda.chapter1;
+package org.logan.lambda.chapter2;
 
 import org.logan.lambda.common.helper.View;
 
@@ -11,7 +11,7 @@ import java.util.function.BinaryOperator;
  * since V 1.0 <br/>
  */
 
-class C1_3_LambdaExpression {
+class C2_3_LambdaExpression {
 
 	public static void main(String[] args) {
 		testLambdaExpression();

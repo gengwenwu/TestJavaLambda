@@ -1,4 +1,4 @@
-package org.logan.lambda.chapter1;
+package org.logan.lambda.chapter2;
 
 import org.logan.lambda.common.helper.Button;
 import org.logan.lambda.common.helper.View;
@@ -11,7 +11,7 @@ import java.util.function.BinaryOperator;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C1_4_UseFinalValue {
+class C2_4_UseFinalValue {
 
 	public static void main(String[] args) {
 		useFinalOperator();
