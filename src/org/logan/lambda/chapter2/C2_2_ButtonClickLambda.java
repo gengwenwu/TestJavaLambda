@@ -12,6 +12,7 @@ class C2_2_ButtonClickLambda {
 
 	public static void main(String[] args) {
 		Button button = new Button();
+
 		button.setOnClickListener(v -> System.out.println("button clicked!"));
 	}
 

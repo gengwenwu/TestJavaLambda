@@ -21,13 +21,13 @@ class C2_3_LambdaExpression {
 	 * Lambda表达式几种形式
 	 */
 	private static void testLambdaExpression() {
-		// 方式一，不包含参数，使用空括号()表示没有参数。
+		// 方式一，不包含参数，使用空括号()表示没有参数。小括号不可以省略。
 		Runnable noArgs = () -> System.out.println("Hello World！");
 
-		// 方式二，Lambda 表达式包含且只包含一个参数,可省略参数的括号。
+		// 方式二，Lambda 表达式包含且只包含一个参数,可省略参数的小括号。
 		View.OnClickListener clickListener = v -> System.out.println("Button Click！");
 
-		// 方式三，Lambda 表达式也可以表示包含多个参数的方法。
+		// 方式三，Lambda 表达式也可以表示包含多个参数的方法，需要小括号将参数括起来。
 		BinaryOperator<Long> add = (x, y) -> x + y;
 
 		// 方式四，Lambda 表达式的主体不仅可以是一个表达式,而且也可以是一段代码块,使用大括号{}将代码块括起来。
