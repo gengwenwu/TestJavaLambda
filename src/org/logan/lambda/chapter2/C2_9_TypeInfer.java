@@ -25,7 +25,7 @@ class C2_9_TypeInfer {
 	}
 
 	private static void testDiamondTypeInfer() {
-		// Java6之前，菱形操作符参数类型必须存在。
+		// Java7之前，菱形操作符参数类型必须存在。
 		Map<String, Integer> oldWordCounts = new HashMap<String, Integer>();
 
 		//  Java7中的菱形操作符，它可通过 javac 推断出泛型参数的类型，因此可以省略。
@@ -40,7 +40,7 @@ class C2_9_TypeInfer {
 	 * 测试Lambda类型推导
 	 */
 	private static void testLambdaTypeInfer() {
-		// 类型推断
+		// 类型推导
 		Predicate<Integer> atLeast5 = x -> x > 5;
 
 		// 在Lambda表达式中无需指定类型，程序依然可以编译。这是因为javac根据程序的上下文在后台推断出了参数的类型。

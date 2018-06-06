@@ -62,7 +62,7 @@ class C2_8_FunctionalInterface {
 
 		// 将addOne方法作为参数传递
 		int y = oper(x, z -> addOne(z));
-		//int y = oper(x, Test4_FunctionApi::addOne);
+		// int t = oper(x, C2_8_FunctionalInterface::addOne);
 		System.out.printf("testFunction() -> x= %d, y = %d \r\n", x, y); // 打印结果 x=1, y=2
 
 		/* 使用lambda表达式来表示这段行为，只要保证一个参数,一个返回值就能匹配 */
