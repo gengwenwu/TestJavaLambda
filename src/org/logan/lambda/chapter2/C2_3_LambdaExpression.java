@@ -17,6 +17,11 @@ class C2_3_LambdaExpression {
 		testLambdaExpression();
 	}
 
+	// Lambda 几种变体
+	// (params) -> expression
+	// (params) -> statement
+	// (params) -> { statements }
+
 	/**
 	 * Lambda表达式几种形式
 	 */
@@ -36,10 +41,6 @@ class C2_3_LambdaExpression {
 			return x + y;
 		};
 
-		// 总结
-		// (params) -> expression
-		// (params) -> statement
-		// (params) -> { statements }
 	}
 
 }
