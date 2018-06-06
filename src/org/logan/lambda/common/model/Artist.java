@@ -13,7 +13,6 @@ import java.util.stream.Stream;
  * since V 1.0 <br/>
  */
 public final class Artist {
-
 	/**
 	 * 音乐家名称
 	 */
@@ -27,9 +26,11 @@ public final class Artist {
 	 */
 	private String nationality;
 
+
 	public Artist(String name, String nationality) {
 		this(name, Collections.emptyList(), nationality);
 	}
+	
 
 	public Artist(String name, List<Artist> members, String nationality) {
 		this.name = name;

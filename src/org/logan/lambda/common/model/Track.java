@@ -7,7 +7,6 @@ package org.logan.lambda.common.model;
  * since V 1.0 <br/>
  */
 public final class Track {
-
 	/**
 	 * 专辑歌曲
 	 */
@@ -17,10 +16,12 @@ public final class Track {
 	 */
 	private final int length;
 
+
 	public Track(String name, int length) {
 		this.name = name;
 		this.length = length;
 	}
+
 
 	public String getName() {
 		return name;
