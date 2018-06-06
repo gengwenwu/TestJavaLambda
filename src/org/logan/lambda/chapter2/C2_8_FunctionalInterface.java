@@ -22,7 +22,7 @@ import static org.logan.lambda.common.LogUtil.printEmptyLine;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C2_5_FunctionalInterface {
+class C2_8_FunctionalInterface {
 
 	public static void main(String[] args) {
 		testFunction();
