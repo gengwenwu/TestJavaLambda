@@ -8,7 +8,7 @@ import java.util.function.BinaryOperator;
  * author: Logan <br/>
  * since V 1。0 <br/>
  */
-class C2_6_TypeInfer {
+class C2_9_TypeInfer {
 
 	public static void main(String[] args) {
 		// 在Lambda表达式中无需指定类型，程序依然可以编译。这是因为javac根据程序的上下文在后台推断出了参数的类型。
