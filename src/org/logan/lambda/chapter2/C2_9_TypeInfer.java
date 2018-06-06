@@ -17,7 +17,7 @@ class C2_9_TypeInfer {
 		// 菱形操作符，类型推导
 		testDiamondTypeInfer();
 
-		// 省略菱形中的参数传递参数，该语法目前在Java8上才支持
+		// 省略菱形中的参数类型传递参数，该语法目前在Java8上才支持
 		useHashMap(new HashMap<>());
 
 		// 测试Lambda类型推导
