@@ -45,6 +45,7 @@ class C2_5_UseFinalValue {
 			return x + y;
 		};
 
+		// z = 4; //z是既成事实上的final，重新赋值是错误的
 		System.out.println(add2.apply(0L, 6L));
 	}
 
