@@ -11,7 +11,7 @@ import java.util.function.BinaryOperator;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C2_4_UseFinalValue {
+class C2_5_UseFinalValue {
 
 	public static void main(String[] args) {
 		useFinalOperator();
