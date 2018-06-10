@@ -10,7 +10,7 @@ import java.util.List;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C3_8_StringToUpperCase {
+class C3_8_IteratorMap {
 
 	public static void main(String[] args) {
 		List<String> collected = new ArrayList<>();
