@@ -35,7 +35,7 @@ public class SampleData {
 
 	/* 专辑 */
 	// 周杰伦 《叶惠美》
-	public static final Album yeHuiMei = new Album("叶惠美", asList(new Track("东风破", 467), new Track("以父之名", 442)), asList(zhouJieLun));
+	public static final Album yeHuiMei = new Album("叶惠美", asList(new Track("东风破", 300), new Track("以父之名", 400), new Track("青花瓷", 600)), asList(zhouJieLun));
 	// 张学友 《吻别》
 	public static final Album wenBie = new Album("吻别", asList(new Track("一路上有你", 500)), asList(zhangXueYou));
 	// 刘德华 《忘情水》
