@@ -21,6 +21,9 @@ class C3_16_StreamApiReduce {
 		explodeReduce();
 	}
 
+	/**
+	 * 展开Reduce
+	 */
 	private static void explodeReduce() {
 		BinaryOperator<Integer> accumulator = (acc, element) -> acc + element;
 		int count = accumulator.apply(
