@@ -8,7 +8,7 @@ import org.logan.lambda.common.SampleData;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C3_3_stream {
+class C3_3_StreamApi {
 
 	public static void main(String[] args) {
 		String nationality = "中国香港";
