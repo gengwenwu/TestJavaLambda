@@ -11,7 +11,7 @@ import java.util.Comparator;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C3_12_StreamMinAndMax {
+class C3_13_StreamMinAndMax {
 
 	public static void main(String[] args) {
 		Track minLengthTrack = SampleData.yeHuiMei.getTrackList()
