@@ -10,7 +10,7 @@ import java.util.stream.Stream;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C3_7_ApiCollect {
+class C3_7_StreamApiCollect {
 
 	public static void main(String[] args) {
 		List<String> collected = Stream.of("a", "b", "c")

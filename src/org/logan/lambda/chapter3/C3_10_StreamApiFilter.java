@@ -5,20 +5,20 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * desc: 使用流将字符串转换为大写 <br/>
- * time: 2018/6/10 下午10:22 <br/>
+ * desc: TODO <br/>
+ * time: 2018/6/10 下午10:32 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C3_9_ApiMap {
+class C3_10_StreamApiFilter {
 
 	public static void main(String[] args) {
-		List<String> collected = Stream.of("a", "b", "hello")
-				.map(string -> string.toUpperCase())
+		List<String> beginningWithNumbers = Stream.of("a", "b", "hello")
+				.filter(value -> Character.isDigit(value.charAt(0)))
 				.collect(Collectors.toList());
 
 		// TODO
-		// assertEquals(asList("A", "B", "HELLO"), collected);
+		// assertEquals(Arrays.asList("1abc"), beginningWithNumbers);
 	}
 
 }
