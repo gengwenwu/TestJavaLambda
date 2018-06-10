@@ -10,7 +10,7 @@ import java.util.stream.Stream;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C3_10_StreamApiFilter {
+class C3_11_StreamApiFilter {
 
 	public static void main(String[] args) {
 		List<String> beginningWithNumbers = Stream.of("a", "b", "hello")
