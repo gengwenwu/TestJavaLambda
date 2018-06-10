@@ -1,5 +1,6 @@
 package org.logan.lambda.chapter3;
 
+import java.util.Arrays;
 import java.util.function.BinaryOperator;
 import java.util.stream.Stream;
 
@@ -12,13 +13,16 @@ import java.util.stream.Stream;
 class C3_16_StreamApiReduce {
 
 	public static void main(String[] args) {
+		sumByStreamReduceMode();
+		explodeReduce();
+		sumByCommandMode();
+	}
+
+	private static void sumByStreamReduceMode() {
 		int count = Stream.of(1, 2, 3)
 				.reduce(0, (acc, element) -> acc + element);
 		// TODO
 		// assertEquals(6, count);
-
-
-		explodeReduce();
 	}
 
 	/**
@@ -32,6 +36,19 @@ class C3_16_StreamApiReduce {
 						2),
 				3);
 		System.out.println("explodeReduce() -> count:" + count);
+	}
+
+	/**
+	 * 使用命令方式
+	 */
+	private static void sumByCommandMode() {
+		int acc = 0;
+		for (Integer element : Arrays.asList(1, 2, 3)) {
+			acc = acc + element;
+		}
+
+		// TODO
+		// assertEquals(6, acc);
 	}
 
 }
