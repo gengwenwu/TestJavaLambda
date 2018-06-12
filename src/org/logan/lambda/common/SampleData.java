@@ -43,6 +43,12 @@ public class SampleData {
 			, asList(new Track("练习", 100), new Track("爱你一万年", 45), new Track("缠绵", 50), new Track("天意", 120), new Track("谢谢你的爱", 80))
 			, asList(liuDeHua));
 
+	// 滚石岁月经典
+	public static final Album rollingStonesYears = new Album("滚石岁月经典"
+			, asList(new Track("心太软", 500), new Track("彩虹", 300), new Track("童年", 400))
+			, asList(new Artist("任贤齐", "中国香港"), new Artist("羽泉", "中国大陆"), new Artist("罗大佑", "中国台湾")));
+
+
 	// 所有专辑
 	public static final List<Album> allAlbums = Arrays.asList(yeHuiMei, wenBie, wangQinShui);
 	public static Stream<Album> albums = Stream.of(yeHuiMei);

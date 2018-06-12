@@ -2,7 +2,7 @@ package org.logan.lambda.chapter3;
 
 import org.logan.lambda.common.SampleData;
 
-import java.util.Set;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -16,15 +16,39 @@ class C3_18_Test {
 	public static void main(String[] args) {
 		//TODO
 		// 找出专辑上的所有表演者。
-		// 分辨出哪些表演者是乐队。
-		// 找出每个乐队的国籍。
-		// 将找出的国籍放入一个集合。
+		// 分辨出哪些表演者名字超过2个字。
+		// 找出每个乐队的籍贯。
+		// 将找出的籍贯放入一个集合。
 
-		Set<String> origins = SampleData.wenBie.getMusicians()
-				.filter(artist -> artist.getName().contains("一"))
+		// SampleData.rollingStonesYears
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	private static void showAnswer() {
+		List<String> list = SampleData.rollingStonesYears.getMusicianList()
+				.stream()
+				.filter(artist -> artist.getName().length() > 2)
 				.map(artist -> artist.getNationality())
-				.collect(Collectors.toSet());
+				.collect(Collectors.toList());
 
+		list.forEach(System.out::println);
 	}
 
 }
