@@ -1,5 +1,7 @@
 package org.logan.lambda.chapter3;
 
+import junit.framework.TestCase;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,8 +22,7 @@ class C3_10_IteratorFilter {
 			}
 		}
 
-		// TODO
-		// assertEquals(asList("1abc"), beginningWithNumbers);
+		TestCase.assertEquals(Arrays.asList("1abc"), beginningWithNumbers);
 	}
 
 }

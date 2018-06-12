@@ -15,17 +15,15 @@ class C3_2_Iterator {
 
 	public static void main(String[] args) {
 		int count = 0;
-		String nationality = "中国香港";
 		Iterator<Artist> iterator = SampleData.allArtists.iterator();
 
 		while (iterator.hasNext()) {
 			Artist artist = iterator.next();
-			if (artist.isFrom(nationality)) {
+			if (artist.isFrom("中国香港")) {
 				count++;
 			}
 		}
 
-		System.out.println(nationality + "'音乐家个数：" + count);
 	}
 
 }

@@ -11,13 +11,9 @@ import org.logan.lambda.common.SampleData;
 class C3_3_Stream {
 
 	public static void main(String[] args) {
-		String nationality = "中国香港";
-
 		long count = SampleData.allArtists.stream()
-				.filter(artist -> artist.isFrom(nationality))
+				.filter(artist -> artist.isFrom("中国香港"))
 				.count();
-
-		System.out.println(nationality + "'音乐家个数：" + count);
 	}
 
 }

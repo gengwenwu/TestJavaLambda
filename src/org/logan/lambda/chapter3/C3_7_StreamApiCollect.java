@@ -1,5 +1,8 @@
 package org.logan.lambda.chapter3;
 
+import junit.framework.TestCase;
+
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -16,8 +19,7 @@ class C3_7_StreamApiCollect {
 		List<String> collected = Stream.of("a", "b", "c")
 				.collect(Collectors.toList());
 
-		// TODO
-		// assertEquals(Arrays.asList("a", "b", "c"), collected);
+		TestCase.assertEquals(Arrays.asList("a", "b", "c"), collected);
 	}
 
 }

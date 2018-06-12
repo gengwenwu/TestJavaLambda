@@ -1,5 +1,8 @@
 package org.logan.lambda.chapter3;
 
+import junit.framework.TestCase;
+
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -17,8 +20,8 @@ class C3_11_StreamApiFilter {
 				.filter(value -> Character.isDigit(value.charAt(0)))
 				.collect(Collectors.toList());
 
-		// TODO
-		// assertEquals(Arrays.asList("1abc"), beginningWithNumbers);
+
+		TestCase.assertEquals(Arrays.asList("1abc"), beginningWithNumbers);
 	}
 
 }

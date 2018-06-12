@@ -11,15 +11,15 @@ import org.logan.lambda.common.model.Artist;
  * since V 1.0 <br/>
  */
 class C3_1_For {
+
 	public static void main(String[] args) {
-		String nationality = "中国香港";
 		int count = 0;
+
 		for (Artist artist : SampleData.allArtists) {
-			if (artist.isFrom(nationality)) {
+			if (artist.isFrom("中国香港")) {
 				count++;
 			}
 		}
-
-		System.out.println(nationality + "'音乐家个数：" + count);
 	}
+
 }

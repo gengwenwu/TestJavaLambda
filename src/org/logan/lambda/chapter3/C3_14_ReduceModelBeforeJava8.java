@@ -1,5 +1,7 @@
 package org.logan.lambda.chapter3;
 
+import junit.framework.TestCase;
+
 import org.logan.lambda.common.SampleData;
 import org.logan.lambda.common.model.Track;
 
@@ -15,7 +17,6 @@ class C3_14_ReduceModelBeforeJava8 {
 
 
 	public static void main(String[] args) {
-		// Track minLengthTrack =
 		List<Track> tracks = SampleData.yeHuiMei.getTrackList();
 		Track shortestTrack = tracks.get(0);
 
@@ -25,18 +26,21 @@ class C3_14_ReduceModelBeforeJava8 {
 			}
 		}
 
-		// TODO
-		// assertEquals(tracks.get(1), shortestTrack);
+		TestCase.assertEquals(tracks.get(1), shortestTrack);
 	}
 
 
 	private static void showReduceMode() {
 		/* reduce 模式 伪代码 */
-		// Object accumulator = initialValue;
+		/*
 
-		// for(Object element : collection) {
-		//	 accumulator = combine(accumulator, element);
-		// }
+		 Object accumulator = initialValue;
+
+		 for(Object element : collection) {
+			 accumulator = combine(accumulator, element);
+		 }
+
+		 */
 	}
 
 }

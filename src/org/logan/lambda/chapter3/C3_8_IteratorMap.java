@@ -1,5 +1,7 @@
 package org.logan.lambda.chapter3;
 
+import junit.framework.TestCase;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,8 +21,7 @@ class C3_8_IteratorMap {
 			collected.add(uppercaseString);
 		}
 
-		// TODO
-		// assertEquals(asList("A", "B", "HELLO"), collected);
+		TestCase.assertEquals(Arrays.asList("A", "B", "HELLO"), collected);
 	}
 
 }

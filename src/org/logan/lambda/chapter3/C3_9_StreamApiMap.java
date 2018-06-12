@@ -1,5 +1,8 @@
 package org.logan.lambda.chapter3;
 
+import junit.framework.TestCase;
+
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -17,8 +20,7 @@ class C3_9_StreamApiMap {
 				.map(string -> string.toUpperCase()) //使用流将字符串转换为大写
 				.collect(Collectors.toList());
 
-		// TODO
-		// assertEquals(asList("A", "B", "HELLO"), collected);
+		TestCase.assertEquals(Arrays.asList("A", "B", "HELLO"), collected);
 	}
 
 }

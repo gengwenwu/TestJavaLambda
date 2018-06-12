@@ -1,5 +1,7 @@
 package org.logan.lambda.chapter3;
 
+import junit.framework.TestCase;
+
 import java.util.Arrays;
 import java.util.function.BinaryOperator;
 import java.util.stream.Stream;
@@ -21,8 +23,8 @@ class C3_16_StreamApiReduce {
 	private static void sumByStreamReduceMode() {
 		int count = Stream.of(1, 2, 3)
 				.reduce(0, (acc, element) -> acc + element);
-		// TODO
-		// assertEquals(6, count);
+
+		TestCase.assertEquals(6, count);
 	}
 
 	/**
@@ -47,8 +49,7 @@ class C3_16_StreamApiReduce {
 			acc = acc + element;
 		}
 
-		// TODO
-		// assertEquals(6, acc);
+		TestCase.assertEquals(6, acc);
 	}
 
 }
