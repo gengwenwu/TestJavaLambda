@@ -7,7 +7,7 @@ import java.util.function.BinaryOperator;
 import java.util.stream.Stream;
 
 /**
- * desc: java8 reduce todo <br/>
+ * reduce: 可以实现从一组值中生成一个值。<br/>
  * time: 2018/6/11 上午7:22 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>

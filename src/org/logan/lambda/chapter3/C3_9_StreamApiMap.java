@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * map: TODO <br/>
+ * map: 将一种类型的值转换成另外一种类型，即：将一个流中的值转换成一个新的流。 <br/>
  * time: 2018/6/10 下午10:22 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
