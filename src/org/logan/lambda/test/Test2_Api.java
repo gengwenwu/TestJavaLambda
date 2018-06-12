@@ -27,18 +27,18 @@ class Test2_Api {
 	//
 	public static void main(String[] args) {
 		testIterator();
-		testCreateStream();
+		testCreateStream(); //未讲
 		testLazyAndEager();
 		testFilter();
-		testDistinct();
-		testLimit();
-		testSkip();
+		testDistinct(); //未讲
+		testLimit(); //未讲
+		testSkip(); //未讲
 		testMap();
 		testFlatMap();
 		testMaxAndMin();
 		testReduce();
 
-		testOptional();
+		testOptional(); //未讲
 	}
 
 	/**
