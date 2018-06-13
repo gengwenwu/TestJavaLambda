@@ -13,23 +13,22 @@ class C3_26_UseLambda {
 
 	private View lastView = null;
 
-
-	private void test1() {
+	private void setOnClickListener() {
 		Button button = new Button();
 
-		// 创建了View.OnClickListener匿名内部类
 		button.setOnClickListener(view -> {
 			lastView = view;
 			System.out.println("button clicked!");
 		});
 	}
 
-	private void test2() {
-		Button button = new Button();
-		View clickView = null;
 
-		// 创建了View.OnClickListener匿名内部类
+	private void setOnClickListener2() {
+		Button button = new Button();
+		View lastView = null;
+
 		button.setOnClickListener(view -> {
+			// 绝非编写错误。这实际上是语言的设计者有意为之，用以鼓励用户使用 Lambda 表达式获取值而不是变量。
 			// clickView = view;
 			System.out.println("button clicked!");
 		});
