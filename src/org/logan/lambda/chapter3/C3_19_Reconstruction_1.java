@@ -20,7 +20,6 @@ import static org.logan.lambda.common.LogUtil.printEmptyLine;
 class C3_19_Reconstruction_1 {
 
 	public static void main(String[] args) {
-		//TODO
 		printEmptyLine();
 	}
 
@@ -40,22 +39,35 @@ class C3_19_Reconstruction_1 {
 		return trackNames;
 	}
 
-//	public static Set<String> test(List<Album> albums) {
-//		//TODO
-//		Set<String> trackNames = new HashSet<>();
-//
-//		for (Album album : albums) {
-//			for (Track track : album.getTrackList()) {
-//				if (track.getLength() > 60) {
-//					String name = track.getName();
-//					trackNames.add(name);
-//				}
-//			}
-//		}
-//
-//		// 遗留代码:找出长度大于 1 分钟的曲目
-//		return trackNames;
-//	}
+	public static Set<String> testStream(List<Album> albums) {
+		//TODO
+		Set<String> trackNames = new HashSet<>();
+
+		for (Album album : albums) {
+			for (Track track : album.getTrackList()) {
+				if (track.getLength() > 60) {
+					String name = track.getName();
+					trackNames.add(name);
+				}
+			}
+		}
+
+		// 遗留代码:找出长度大于 60秒的曲目
+		return trackNames;
+	}
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 
 	// 1：将for替换成forEach
@@ -107,7 +119,7 @@ class C3_19_Reconstruction_1 {
 				.collect(Collectors.toSet());
 	}
 
-	// 5：使用方法属性
+	// 5：使用方法引用
 	public static Set<String> findLongTracks5(List<Album> albums) {
 		return albums.stream()
 				.flatMap(Album::getTracks)
