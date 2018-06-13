@@ -1,7 +1,9 @@
 package org.logan.lambda.chapter3;
 
 import org.logan.lambda.common.SampleData;
+import org.logan.lambda.common.model.Artist;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -14,34 +16,45 @@ import java.util.stream.Collectors;
 class C3_18_Test {
 
 	public static void main(String[] args) {
-		//TODO
-		// 找出专辑上的所有表演者。
-		// 分辨出哪些表演者名字超过2个字。
-		// 找出每个乐队的籍贯。
-		// 将找出的籍贯放入一个集合。
+		//
+		// 找出 SampleData.rollingStonesYears 专辑上的所有表演者。
+		// 分辨出哪些表演者姓名超过2个字。
+		// 并找出每个乐队的籍贯。
+		// 最后将找出的籍贯放入一个集合返回。
 
-		// SampleData.rollingStonesYears
 	}
 
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
+	private static List<String> getArtistNationalities() {
+		List<String> nationalities = new ArrayList<>();
 
+		for (Artist artist : SampleData.rollingStonesYears.getMusicianList()) {
+			if (artist.getName().length() > 2) {
+				nationalities.add(artist.getNationality());
+			}
+		}
 
+		return nationalities;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	private static void showAnswer() {
+	private static void getArtistNationalitiesByLambda() {
 		List<String> list = SampleData.rollingStonesYears.getMusicianList()
 				.stream()
 				.filter(artist -> artist.getName().length() > 2)
