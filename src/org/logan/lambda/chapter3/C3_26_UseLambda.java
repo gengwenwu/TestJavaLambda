@@ -11,11 +11,8 @@ import org.logan.lambda.common.helper.View;
  */
 class C3_26_UseLambda {
 
-	public static void main(String[] args) {
-		// TODO
-	}
-
 	private View lastView = null;
+
 
 	private void test1() {
 		Button button = new Button();
@@ -29,11 +26,11 @@ class C3_26_UseLambda {
 
 	private void test2() {
 		Button button = new Button();
-		View tempView = null;
+		View clickView = null;
 
 		// 创建了View.OnClickListener匿名内部类
 		button.setOnClickListener(view -> {
-			// tempView = view;
+			// clickView = view;
 			System.out.println("button clicked!");
 		});
 	}
