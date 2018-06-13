@@ -16,8 +16,8 @@ class C3_16_StreamApiReduce {
 
 	public static void main(String[] args) {
 		sumByStreamReduceMode();
-		explodeReduce();
-		sumByCommandMode();
+		// explodeReduce();
+		// sumByCommandMode();
 	}
 
 	private static void sumByStreamReduceMode() {

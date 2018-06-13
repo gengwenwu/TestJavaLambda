@@ -23,13 +23,13 @@ class C3_4_StreamLazyAndEarly {
 				});
 
 		// 及早求值
-		System.out.println("===============");
-		long count = SampleData.allArtists.stream()
-				.filter(artist -> {
-					System.out.println(artist.getName());
-					return artist.isFrom(nationality);
-				}).count();
-		System.out.println(nationality + "'音乐家个数：" + count);
+//		System.out.println("===============");
+//		long count = SampleData.allArtists.stream()
+//				.filter(artist -> {
+//					System.out.println(artist.getName());
+//					return artist.isFrom(nationality);
+//				}).count();
+//		System.out.println(nationality + "'音乐家个数：" + count);
 	}
 
 }

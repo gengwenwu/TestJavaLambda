@@ -20,6 +20,8 @@ class C3_1_For {
 				count++;
 			}
 		}
+
+		System.out.println("count:" + count);
 	}
 
 }

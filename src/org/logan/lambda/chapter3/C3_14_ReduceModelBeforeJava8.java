@@ -15,7 +15,6 @@ import java.util.List;
  */
 class C3_14_ReduceModelBeforeJava8 {
 
-
 	public static void main(String[] args) {
 		List<Track> tracks = SampleData.yeHuiMei.getTrackList();
 		Track shortestTrack = tracks.get(0);
@@ -26,7 +25,7 @@ class C3_14_ReduceModelBeforeJava8 {
 			}
 		}
 
-		TestCase.assertEquals(tracks.get(1), shortestTrack);
+		TestCase.assertEquals(tracks.get(0), shortestTrack);
 	}
 
 

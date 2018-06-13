@@ -14,6 +14,8 @@ class C3_3_Stream {
 		long count = SampleData.allArtists.stream()
 				.filter(artist -> artist.isFrom("中国香港"))
 				.count();
+
+		System.out.println("count:" + count);
 	}
 
 }

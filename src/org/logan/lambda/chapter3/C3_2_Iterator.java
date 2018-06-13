@@ -14,6 +14,7 @@ import java.util.Iterator;
 class C3_2_Iterator {
 
 	public static void main(String[] args) {
+
 		int count = 0;
 		Iterator<Artist> iterator = SampleData.allArtists.iterator();
 
@@ -24,6 +25,7 @@ class C3_2_Iterator {
 			}
 		}
 
+		System.out.println("count:" + count);
 	}
 
 }
