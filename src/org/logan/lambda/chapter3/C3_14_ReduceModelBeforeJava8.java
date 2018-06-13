@@ -16,6 +16,7 @@ import java.util.List;
 class C3_14_ReduceModelBeforeJava8 {
 
 	public static void main(String[] args) {
+		// 使用 for 循环查找最短曲目
 		List<Track> tracks = SampleData.yeHuiMei.getTrackList();
 		Track shortestTrack = tracks.get(0);
 
