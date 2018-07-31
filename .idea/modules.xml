@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TestLambda.iml" filepath="$PROJECT_DIR$/TestLambda.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestLambda_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TestLambda_main.iml" group="TestLambda" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestLambda_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TestLambda_test.iml" group="TestLambda" />
     </modules>
   </component>
 </project>

@@ -10,7 +10,6 @@ repositories {
 }
 
 dependencies {
-    //testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile "junit:junit:4.12"
     testCompile "org.apache.logging.log4j:log4j-osgi:jar:2.11.1"
 

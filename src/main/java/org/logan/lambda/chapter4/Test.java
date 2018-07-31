@@ -6,7 +6,6 @@ package org.logan.lambda.chapter4;
  * author: Logan <br/>
  * since V TODO <br/>
  */
-
 class Test {
-	
+
 }
