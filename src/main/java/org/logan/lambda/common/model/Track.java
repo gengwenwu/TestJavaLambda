@@ -14,10 +14,10 @@ public final class Track {
 	/**
 	 * 歌曲播放时间。
 	 */
-	private final int length;
+	private final Integer length;
 
 
-	public Track(String name, int length) {
+	public Track(String name, Integer length) {
 		this.name = name;
 		this.length = length;
 	}
@@ -27,7 +27,7 @@ public final class Track {
 		return name;
 	}
 
-	public int getLength() {
+	public Integer getLength() {
 		return length;
 	}
 

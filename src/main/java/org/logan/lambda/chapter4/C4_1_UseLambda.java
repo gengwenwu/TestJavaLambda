@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C4_1_Use_Lambda {
+class C4_1_UseLambda {
 
 	private static Logger mLogger;
 
