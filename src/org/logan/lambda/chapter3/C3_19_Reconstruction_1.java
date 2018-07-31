@@ -1,5 +1,6 @@
 package org.logan.lambda.chapter3;
 
+import org.logan.lambda.common.SampleData;
 import org.logan.lambda.common.model.Album;
 import org.logan.lambda.common.model.Track;
 
@@ -21,6 +22,8 @@ class C3_19_Reconstruction_1 {
 
 	public static void main(String[] args) {
 		printEmptyLine();
+
+		findLongTracks5(SampleData.allAlbums);
 	}
 
 
@@ -38,37 +41,6 @@ class C3_19_Reconstruction_1 {
 
 		return trackNames;
 	}
-
-	public static Set<String> testStream(List<Album> albums) {
-		//TODO
-		Set<String> trackNames = new HashSet<>();
-
-		for (Album album : albums) {
-			for (Track track : album.getTrackList()) {
-				if (track.getLength() > 60) {
-					String name = track.getName();
-					trackNames.add(name);
-				}
-			}
-		}
-
-		// 遗留代码:找出长度大于 60秒的曲目
-		return trackNames;
-	}
-
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
 
 	// 1：将for替换成forEach
 	public static Set<String> findLongTracks1(List<Album> albums) {
