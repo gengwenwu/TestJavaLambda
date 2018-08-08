@@ -12,7 +12,7 @@ import java.util.IntSummaryStatistics;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C4_2_BaseType {
+class C4_4_BaseType {
 
 	public static void main(String[] args) {
 		printTrackLengthStatics(SampleData.rollingStonesYears);

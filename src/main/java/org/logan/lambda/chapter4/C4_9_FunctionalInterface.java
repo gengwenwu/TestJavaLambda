@@ -7,7 +7,7 @@ package org.logan.lambda.chapter4;
  * since V 1.0 <br/>
  */
 @FunctionalInterface
-interface C4_4_FunctionalInterface { // abstract class
+interface C4_9_FunctionalInterface { // abstract class
 
 	void method1(); // public abstract
 

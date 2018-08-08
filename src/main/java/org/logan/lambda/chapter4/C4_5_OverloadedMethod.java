@@ -13,7 +13,7 @@ import java.util.function.Predicate;
  * author: Logan <br/>
  * since V 1。0 <br/>
  */
-class C4_3_OverloadedMethod {
+class C4_5_OverloadedMethod {
 
 	public static void main(String[] args) {
 		overloadedMethod("abc");
