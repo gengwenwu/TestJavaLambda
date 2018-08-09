@@ -5,7 +5,6 @@ import org.logan.lambda.common.model.Artist;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 import java.util.stream.Stream;
@@ -37,8 +36,6 @@ class Test2_Api {
 		testFlatMap();
 		testMaxAndMin();
 		testReduce();
-
-		testOptional(); //未讲
 	}
 
 	/**
@@ -239,27 +236,6 @@ class Test2_Api {
 		System.out.println("testReduce() -> age:" + age);
 
 		printEmptyLine();
-	}
-
-
-	private static void testOptional() {
-		Optional empty = Optional.ofNullable("abc"); //可以接受null
-		// Optional empty2 = Optional.of(null);//不能接受null
-
-		if (empty.isPresent()) { //isPresent(): 非null为true
-			//get(): 如果Optional有值则将其返回，否则抛出NoSuchElementException。
-			System.out.println("testOptional() -> " + empty.get());
-		} else {
-			System.out.println("testOptional() -> empty 为null！");
-		}
-
-		// ifPresent：如果Optional实例有值，则为其调用consumer，否则不做处理
-		empty.ifPresent(value -> {
-			System.out.println("testOptional() ->ifPresent() value:" + value);
-		});
-
-		// orElse：如果有值则将其返回，否则返回指定的其它值，如："为空的默认值"
-		System.out.println("testOptional() -> orElse('为空的默认值。') value:" + empty.orElse(("为空的默认值")));
 	}
 
 }

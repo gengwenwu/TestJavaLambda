@@ -12,7 +12,7 @@ import static junit.framework.TestCase.assertEquals;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-public class DefaultTest {
+public class C4_DefaultTest {
 
 	/**
 	 * 当没有任何子类重写默认方法，优先使用接口中定义的默认方法
