@@ -15,9 +15,9 @@ class C4_22_Optional {
 	public static void main(String[] args) {
 		/* 1，创建Optional方式 */
 		// 创建有值的 Optional 对象，值必须不能为null，否则异常
-		Optional<String> a = Optional.of("a");// null -> ava.lang.NullPointerException
+		Optional<String> a = Optional.of("a");// null -> Java.lang.NullPointerException
 
-		// 创建可null的 Optional 对象，值不能为null，否则异常
+		// 创建可null的 Optional 对象，值可以为null
 		Optional alsoEmpty = Optional.ofNullable(null);
 
 		// 创建一个空的 Optional 对象
