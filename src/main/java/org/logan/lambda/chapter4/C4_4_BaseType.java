@@ -19,10 +19,13 @@ class C4_4_BaseType {
 	}
 
 	private static void printTrackLengthStatics(Album album) {
+		// Integer、Long、Double...
+		// int、long、double...
+
 		IntSummaryStatistics trackLengthStats =
 				album.getTracks()
 						.mapToInt(track -> track.getLength()) //将Length转换为int基本类型，返回 IntStream
-						// mapToDouble() // 将Length转换为double，返回 DoubleStream
+						// .mapToDouble() // 将Length转换为double，返回 DoubleStream
 						// .mapToLong() // 将Length转换为long，返回 LongStream
 						// .map(length -> length + 10) // IntStream的map参数为IntUnaryOperator，即：整型值映射成另一个整型值
 						// .mapToObj(length -> length) //高阶函数装箱方法，将Length转换为包装类型，转换为Stream

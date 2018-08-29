@@ -21,6 +21,7 @@ class C4_5_OverloadedMethod {
 		overloadedMethod((x, y) -> x + y);
 
 		// overloadedMethod(x -> true);
+		/* 强转 -> 代码异味 */
 		// overloadedMethod((Predicate)x -> true);
 		// overloadedMethod((IntPredicate)x -> true);
 	}
