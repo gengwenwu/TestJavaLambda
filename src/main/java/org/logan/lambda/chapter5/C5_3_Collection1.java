@@ -9,12 +9,11 @@ import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 /**
- * desc: 流转换为集合 <br/>
+ * desc: 流转换为集合 - Collections.toXXX、指定具体集合类型 <br/>
  * time: 2018/11/11 下午3:13 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-
 class C5_3_Collection1 {
 
 	public static void main(String[] args) {

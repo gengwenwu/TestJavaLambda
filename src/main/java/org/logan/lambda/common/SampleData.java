@@ -31,7 +31,7 @@ public class SampleData {
 	public static final Artist theGod = new Artist("四大天王", membersOfGod, "香港");
 
 	// 所有歌手
-	public static final List<Artist> allArtists = Arrays.asList(zhouJieLun, zhangXueYou, liuDeHua, guoFuCheng, niMing, laoLang);
+	public static final List<Artist> allArtists = Arrays.asList(zhouJieLun, zhangXueYou, liuDeHua, guoFuCheng, niMing, laoLang, theGod);
 
 	/* 专辑 */
 	// 周杰伦 《叶惠美》
