@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * desc: 数据分组 groupingBy <br/>
+ * desc: 数据分组 Collectors.groupingBy() <br/>
  * {@link Collectors#groupingBy(Function)} <br/>
  * {@link Collectors#groupingByConcurrent(Function)} <br/>
  * {@link Collectors#groupingBy(Function, Collector)} <br/>
