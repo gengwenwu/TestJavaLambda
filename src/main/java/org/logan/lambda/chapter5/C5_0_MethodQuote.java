@@ -8,7 +8,7 @@ import java.util.function.BiFunction;
 import java.util.function.IntFunction;
 
 /**
- * desc: 方法引用 <br/>
+ * desc: lambda - 方法引用 <br/>
  * 1，标准语法为：Classname::methodName，不需要小括号。支持普通函数、构造方法、数组。<br/>
  * 2，凡是使用 Lambda 表达式的地方，就可以使用方法引用 <br/>
  * 3，方法引用自动支持多个参数，前提是选对了正确的函数接口。
