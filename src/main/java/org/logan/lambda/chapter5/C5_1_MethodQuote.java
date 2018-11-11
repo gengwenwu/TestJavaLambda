@@ -16,7 +16,7 @@ import java.util.function.IntFunction;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C5_0_MethodQuote {
+class C5_1_MethodQuote {
 
 	public static void main(String[] args) {
 		testMethodQuote();

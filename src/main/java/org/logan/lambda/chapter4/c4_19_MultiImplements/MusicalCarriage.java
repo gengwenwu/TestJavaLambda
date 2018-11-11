@@ -1,4 +1,4 @@
-package org.logan.lambda.chapter4.c4_19_multi_implements;
+package org.logan.lambda.chapter4.c4_19_MultiImplements;
 
 /**
  * desc: 多重实现演示，当Carriage、Jukebox <br/>
