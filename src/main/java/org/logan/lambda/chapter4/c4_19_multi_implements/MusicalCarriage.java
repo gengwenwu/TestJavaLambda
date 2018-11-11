@@ -8,13 +8,14 @@ package org.logan.lambda.chapter4.c4_19_multi_implements;
  * class Musical Carriage inherits unrelated defaults for rock() from types Carriage and Jukebox
  * return Carriage.super.rock();
  */
-class MusicalCarriage implements Carriage { //, Jukebox
+class MusicalCarriage implements Carriage, Jukebox { //
 
-	/*
+	/**/
 	@Override
 	public String rock() {
-
+		return Jukebox.super.rock();
+		//return Carriage.super.rock();
 	}
-	*/
+
 
 }
