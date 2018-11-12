@@ -18,14 +18,14 @@ class C5_3_Collection5 {
 	public static void main(String[] args) {
 		// 要求将艺术家姓名格式化为：
 		// 	 [周杰伦, 老狼, 四大天王, 张学友, 刘德华, 郭富城, 黎明]
-		printlnAllArtistNames(SampleData.allArtists);
-		printlnAllArtistNames(SampleData.allArtists.stream());
+		printArtistNames(SampleData.allArtists);
+		printArtistNames(SampleData.allArtists.stream());
 	}
 
 	/**
 	 * java8之前格式化字符串
 	 */
-	private static void printlnAllArtistNames(List<Artist> artists) {
+	public static void printArtistNames(List<Artist> artists) {
 		StringBuilder builder = new StringBuilder("[");
 		for (Artist artist : artists) {
 			if (builder.length() > 1) {
@@ -43,7 +43,7 @@ class C5_3_Collection5 {
 	/**
 	 * java8 格式化字符串
 	 */
-	private static void printlnAllArtistNames(Stream<Artist> artistStream) {
+	private static void printArtistNames(Stream<Artist> artistStream) {
 		String result = artistStream.map(Artist::getName)
 				.collect(Collectors.joining(", ", "[", "]"));
 		System.out.println("艺术家名称2：" + result);
