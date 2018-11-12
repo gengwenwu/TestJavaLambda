@@ -25,6 +25,7 @@ public class SampleData {
 	public static final Artist guoFuCheng = new Artist("郭富城", "中国香港");
 	public static final Artist niMing = new Artist("黎明", "中国香港");
 	public static final Artist laoLang = new Artist("老狼", "中国北京");
+	//public static final Artist easonChan = new Artist("陈奕迅", "中国香港");
 
 	/* 乐队 */
 	public static final List<Artist> membersOfGod = Arrays.asList(zhangXueYou, liuDeHua, guoFuCheng, niMing);
@@ -37,11 +38,12 @@ public class SampleData {
 	// 周杰伦 《叶惠美》
 	public static final Album yeHuiMei = new Album("叶惠美", asList(new Track("东风破", 300), new Track("以父之名", 400), new Track("简单爱", 600)), asList(zhouJieLun));
 	// 张学友 《吻别》
-	public static final Album wenBie = new Album("吻别", asList(new Track("一路上有你", 500), new Track("每天爱你多一些", 300)), asList(zhangXueYou));
+	public static final Album kissGoodBye = new Album("吻别", asList(new Track("一路上有你", 500), new Track("每天爱你多一些", 300)), asList(zhangXueYou));
 	// 刘德华 《忘情水》
 	public static final Album wangQinShui = new Album("忘情水"
 			, asList(new Track("练习", 100), new Track("爱你一万年", 45), new Track("缠绵", 50), new Track("天意", 120), new Track("谢谢你的爱", 80))
 			, asList(liuDeHua));
+	public static final Album baDuKongJian = new Album("八度空间", asList(new Track("半兽人", 450), new Track("半岛铁盒", 400)), asList(zhouJieLun));
 
 	// 滚石岁月经典
 	public static final Album rollingStonesYears = new Album("滚石岁月经典"
@@ -50,7 +52,7 @@ public class SampleData {
 
 
 	// 所有专辑
-	public static final List<Album> allAlbums = Arrays.asList(yeHuiMei, wenBie, wangQinShui);
+	public static final List<Album> allAlbums = Arrays.asList(yeHuiMei, kissGoodBye, wangQinShui, baDuKongJian);
 	public static Stream<Album> albums = Stream.of(yeHuiMei);
 
 	public static Stream<Artist> threeArtists() {

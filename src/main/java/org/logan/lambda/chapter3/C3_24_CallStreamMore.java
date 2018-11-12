@@ -21,7 +21,7 @@ class C3_24_CallStreamMore {
 	 */
 	public static void main(String[] args) {
 
-		List<Artist> musicians = SampleData.wenBie.getMusicians()
+		List<Artist> musicians = SampleData.kissGoodBye.getMusicians()
 				.collect(Collectors.toList());
 
 		List<Artist> bands = musicians.stream()
