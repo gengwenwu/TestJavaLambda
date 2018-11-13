@@ -25,7 +25,6 @@ public class SampleData {
 	public static final Artist guoFuCheng = new Artist("郭富城", "中国香港");
 	public static final Artist niMing = new Artist("黎明", "中国香港");
 	public static final Artist laoLang = new Artist("老狼", "中国北京");
-	//public static final Artist easonChan = new Artist("陈奕迅", "中国香港");
 
 	/* 乐队 */
 	public static final List<Artist> membersOfGod = Arrays.asList(zhangXueYou, liuDeHua, guoFuCheng, niMing);
