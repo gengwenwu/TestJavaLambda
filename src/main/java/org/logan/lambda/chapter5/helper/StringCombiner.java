@@ -48,16 +48,21 @@ public class StringCombiner {
 
 	public StringCombiner merge(StringCombiner other) {
 		builder.append(other.builder);
-//		if (other.builder.length() > 0) {
-//			if (areAtStart()) {
-//				builder.append(prefix);
-//			} else {
-//				builder.append(delimit);
-//			}
-//			builder.append(other.builder, prefix.length(), other.builder.length());
-//		}
 		return this;
 	}
+
+	public StringCombiner merge2(StringCombiner other) {
+		if (other.builder.length() > 0) {
+			if (areAtStart()) {
+				builder.append(prefix);
+			} else {
+				builder.append(delimit);
+			}
+			builder.append(other.builder, prefix.length(), other.builder.length());
+		}
+		return this;
+	}
+
 
 	@Override
 	public String toString() {
