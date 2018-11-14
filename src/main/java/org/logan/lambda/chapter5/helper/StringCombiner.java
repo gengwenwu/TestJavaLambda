@@ -2,6 +2,7 @@ package org.logan.lambda.chapter5.helper;
 
 /**
  * desc: String 合并器 <br/>
+ * jdk实现：{@link java.util.StringJoiner}
  * time: 2018/11/11 下午17:11 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>

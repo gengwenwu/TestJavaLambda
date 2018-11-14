@@ -10,10 +10,9 @@ import java.util.stream.Collector;
 
 /**
  * desc: 自定义string 收集器 <br/>
- * TODO
- * StringJoiner
  * 一个自定义收集器由四部分组成，分别是： <br/>
- * 1，suppliers,这是一个工厂方法，用来创建容器。
+ * 1，suppliers,这是一个工厂方法，用来创建容器。 <br/>
+ * 一些细节可参考：https://www.01hai.com/note/av129580 <br/>
  * time: 2018/11/11 下午5:30 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
@@ -58,11 +57,17 @@ public class StringCollector implements Collector<String, StringCombiner, String
 		return StringCombiner::add;
 	}
 
+	/**
+	 * 如何并行还是需要取决于我们自己，这就是combiner要做的事情
+	 */
 	@Override
 	public BinaryOperator<StringCombiner> combiner() {
 		return StringCombiner::merge;
 	}
 
+	/**
+	 * 当遍历完流之后，我们需要对结果做一个处理，返回一个我们想要的结果。这就是finisher方法所定义的事情
+	 */
 	@Override
 	public Function<StringCombiner, String> finisher() {
 		return StringCombiner::toString;
