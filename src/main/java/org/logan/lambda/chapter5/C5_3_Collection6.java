@@ -67,7 +67,8 @@ class C5_3_Collection6 {
 	private static void numberOfAlbums2(Stream<Album> albums) {
 		/*
 		 * groupingBy 先将元素分成块，每块都与分类函数 getMainMusician 提供的键值相关联，
-		 * 然后使用下游的另一个收集器收集每块中的元素，最后将结果映射为一个 Map。
+		 * 然后使用下游的另一个收集器收集每块中的元素，
+		 * 最后将结果映射为一个 Map。
 		 **/
 		Map<Artist, Long> albumsMap = albums
 				.collect(Collectors.groupingBy(Album::getMainMusician, Collectors.counting()));
