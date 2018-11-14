@@ -30,13 +30,7 @@ class C5_1_MethodQuote {
 	 * 1，测试方法引用 - 普通函数
 	 */
 	private static void testMethodQuote() {
-		new Thread(new Runnable() {
-			@Override
-			public void run() {
-				doSleep();
-				System.out.println("do some thing!");
-			}
-		}).start();
+		new Thread(C5_1_MethodQuote::doSleep).start();
 	}
 
 	private static void doSleep() {
