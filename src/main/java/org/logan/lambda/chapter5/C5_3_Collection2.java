@@ -34,9 +34,11 @@ class C5_3_Collection2 {
 	 */
 	private static void biggestGroup(Stream<Artist> artists) {
 		/* 找出成员最多的乐队 */
-		Function<Artist, Long> count = artist -> artist.getMembers().count();
-		Optional<Artist> biggestGroup = artists.collect(Collectors.maxBy(Comparator.comparing(count)));
-		// Optional<Artist> biggestGroup = artists.max(Comparator.comparing(count));
+		Function<Artist, Long> countFunc = artist -> artist.getMembers().count();
+		Optional<Artist> biggestGroup = artists
+				.collect(Collectors.maxBy(Comparator.comparing(countFunc)));
+		// 简写
+		// Optional<Artist> biggestGroup = artists.max(Comparator.comparing(countFunc));
 
 		biggestGroup.ifPresent(artist ->
 				System.out.println("乐队最多成员是：" + artist.getName())
