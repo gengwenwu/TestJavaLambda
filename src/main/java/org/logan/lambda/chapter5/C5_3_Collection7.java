@@ -24,19 +24,19 @@ class C5_3_Collection7 {
 		C5_3_Collection5.printArtistNames(SampleData.allArtists);
 		LogUtil.printEmptyLine();
 
-		// 使用stream改进
+		// 使用stream改进 1
 		printArtistNamesByStream1(SampleData.allArtists);
 		LogUtil.printEmptyLine();
 
-		// 使用reduce改进
+		// 使用reduce改进 2
 		printArtistNamesByStream2(SampleData.allArtists);
 		LogUtil.printEmptyLine();
 
-		// 优化reduce
+		// 优化reduce 3
 		printArtistNamesByStream3(SampleData.allArtists);
 		LogUtil.printEmptyLine();
 
-		// 使用自定义收集器
+		// 使用自定义收集器 4
 		printArtistNamesByStream4(SampleData.allArtists);
 
 	}

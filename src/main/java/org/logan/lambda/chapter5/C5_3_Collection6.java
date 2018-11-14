@@ -8,11 +8,15 @@ import org.logan.lambda.common.model.Artist;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
  * desc: 组合收集器 <br/>
+ * {@link Collectors#counting()} <br/>
+ * {@link Collectors#mapping(Function, Collector)} <br/>
  * time: 2018/11/11 下午17:11 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
@@ -20,6 +24,7 @@ import java.util.stream.Stream;
 class C5_3_Collection6 {
 
 	public static void main(String[] args) {
+		/* 计算每个艺术家专辑数 */
 		{
 			numberOfAlbums1(SampleData.allAlbums.stream());
 			LogUtil.printEmptyLine();
