@@ -50,7 +50,7 @@ public class StringCollector implements Collector<String, StringCombiner, String
 	}
 
 	/**
-	 * accumulator() 的作用和 reduce 操作的第二个参数一样
+	 * accumulator() 的作用和 reduce 操作的第二个参数一样，它结合之前操作的结果和当前值，生成并返回新的值。
 	 */
 	@Override
 	public BiConsumer<StringCombiner, String> accumulator() {
@@ -58,7 +58,7 @@ public class StringCollector implements Collector<String, StringCombiner, String
 	}
 
 	/**
-	 * 如何并行还是需要取决于我们自己，这就是combiner要做的事情
+	 * combiner() 很像 reduce 操作的第三个方法。如果有两个容器，我们需要将其合并
 	 */
 	@Override
 	public BinaryOperator<StringCombiner> combiner() {

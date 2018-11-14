@@ -80,7 +80,8 @@ class C5_3_Collection6 {
 
 
 	/**
-	 * 统计艺术家专辑名称列表 -- 对 {@link #numberOfAlbums1(Stream)}简单改版方式
+	 * 让我们再看下面的例子，这次我们不想生成一组专辑，只希望得到专辑名。<br/>
+	 * 统计艺术家专辑名称列表 -- 对 {@link #numberOfAlbums1(Stream)} 简单改版方式。<br/>
 	 */
 	private static void nameOfAlbumsDumb1(Stream<Album> albums) {
 		Map<Artist, List<Album>> albumsByArtist = albums
