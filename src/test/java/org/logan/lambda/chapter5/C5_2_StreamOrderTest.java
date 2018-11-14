@@ -58,7 +58,7 @@ public class C5_2_StreamOrderTest {
 			一些中间操作会产生顺序，譬如对值对映射。
 			1，如果进来的流是有序的，那出去的流是也是有序的。
 			2，如果进来的流是无序的，那出去的流是也是无序的。
-		 */
+		 **/
 		List<Integer> numberList = Arrays.asList(1, 2, 3, 4);
 
 		{
