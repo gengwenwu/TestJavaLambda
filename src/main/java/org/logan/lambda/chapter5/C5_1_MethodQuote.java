@@ -54,13 +54,13 @@ class C5_1_MethodQuote {
 	 * 2，测试方法引用 - 构造函数
 	 */
 	private static void testMethodQuoteConstructor() {
-		// 正常歌曲
+		// java7 构造
 		Track track = createFinalTrack((musicName, musicLength) -> {
 			return new Track(musicName, musicLength);
 		}, "光辉岁月", 180);
 		System.out.println("开始播放歌曲：" + track.getName() + ", 歌曲长度：" + track.getLength());
 
-		// 异常歌曲
+		// java 8 构造
 		track = createFinalTrack(Track::new, "北京一夜", 200);
 		System.out.println("开始播放歌曲：" + track.getName() + ", 歌曲长度：" + track.getLength());
 	}
