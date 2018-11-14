@@ -11,7 +11,7 @@ import java.util.stream.Collector;
 /**
  * desc: 自定义string 收集器 <br/>
  * 一个自定义收集器由四部分组成，分别是： <br/>
- * 1，suppliers,这是一个工厂方法，用来创建容器。 <br/>
+ * suppliers、accumulator、combiner、finisher <br/>
  * 一些细节可参考：https://www.01hai.com/note/av129580 <br/>
  * time: 2018/11/11 下午5:30 <br/>
  * author: Logan <br/>
