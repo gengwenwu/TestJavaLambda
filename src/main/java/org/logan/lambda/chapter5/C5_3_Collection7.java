@@ -17,17 +17,20 @@ import java.util.List;
 class C5_3_Collection7 {
 
 	public static void main(String[] args) {
+		// 要求将艺术家姓名格式化为：
+		//    [周杰伦, 老狼, 四大天王, 张学友, 刘德华, 郭富城, 黎明]
+
 		// java7 方式
-//		C5_3_Collection5.printArtistNames(SampleData.allArtists);
-//		LogUtil.printEmptyLine();
+		C5_3_Collection5.printArtistNames(SampleData.allArtists);
+		LogUtil.printEmptyLine();
 
 		// 使用stream改进
-//		printArtistNamesByStream1(SampleData.allArtists);
-//		LogUtil.printEmptyLine();
+		printArtistNamesByStream1(SampleData.allArtists);
+		LogUtil.printEmptyLine();
 
 		// 使用reduce改进
-//		printArtistNamesByStream2(SampleData.allArtists);
-//		LogUtil.printEmptyLine();
+		printArtistNamesByStream2(SampleData.allArtists);
+		LogUtil.printEmptyLine();
 
 		// 优化reduce
 		printArtistNamesByStream3(SampleData.allArtists);

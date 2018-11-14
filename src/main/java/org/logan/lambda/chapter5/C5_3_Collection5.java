@@ -25,7 +25,7 @@ class C5_3_Collection5 {
 	/**
 	 * java8之前格式化字符串
 	 */
-	private static void printArtistNames(List<Artist> artists) {
+	public static void printArtistNames(List<Artist> artists) {
 		StringBuilder builder = new StringBuilder("[");
 		for (Artist artist : artists) {
 			if (builder.length() > 1) {
