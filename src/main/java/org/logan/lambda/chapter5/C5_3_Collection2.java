@@ -70,7 +70,7 @@ class C5_3_Collection2 {
 		}
 
 		{
-			// 实现方式二
+			// 实现方式二 - summarizingInt
 			IntSummaryStatistics summary = albums.stream()
 					.collect(Collectors.summarizingInt(album -> album.getTrackList().size()));
 			System.out.println("average3:" + summary.getAverage() + "，track sum:" + summary.getSum());
