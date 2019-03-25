@@ -3,6 +3,7 @@ package org.logan.lambda.chapter6;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.IntFunction;
+import java.util.function.Supplier;
 import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.groupingBy;
@@ -20,19 +21,20 @@ class C6_2_DiceRolls {
 	private static final int N = 100000000;//一亿次
 
 	public static void main(String[] ignore) {
-		System.out.println("serial begin...");
+		// 串行方式
+		rollDice("serial", C6_2_DiceRolls::serialDiceRolls);
+
+		System.out.println("----------------------");
+
+		// 并行方式
+		rollDice("parallel", C6_2_DiceRolls::parallelDiceRolls);
+	}
+
+	private static void rollDice(String flag, Supplier<Map<Integer, Double>> supplier) {
+		System.out.println(flag + " begin...");
 		long time = System.currentTimeMillis();
-		print(serialDiceRolls());
-		System.out.println("serial end。==========> useTime:" + (System.currentTimeMillis() - time));
-
-		System.out.println("");
-		System.out.println("========");
-		System.out.println("");
-
-		System.out.println("parallel begin...");
-		time = System.currentTimeMillis();
-		print(parallelDiceRolls());
-		System.out.println("parallel end。==========> useTime:" + (System.currentTimeMillis() - time));
+		print(supplier.get());
+		System.out.println(flag + " end。==========> useTime:" + (System.currentTimeMillis() - time));
 	}
 
 	private static Map<Integer, Double> serialDiceRolls() {
