@@ -21,25 +21,26 @@ import static java.util.stream.Collectors.groupingBy;
  */
 class C6_6_WordCounting {
 
+	// 匹配空格
+	private static final Pattern space = Pattern.compile("\\s+");
+
 	public static void main(String[] args) throws FileNotFoundException {
 		// 23MB文件
 		String path = System.getProperty("user.dir") + "/resources/log2.txt";
 		System.err.println("====== begin.... ");
 
-		// 1
+		// 串行化
 		long time = System.currentTimeMillis();
-		new C6_6_WordCounting().countWords(new FileInputStream(new File(path)));
-		System.err.println("===========>use time1:" + (System.currentTimeMillis() - time));
+		countWordsSerial(new FileInputStream(new File(path)));
+		// System.err.println("=================> Serial use time:" + (System.currentTimeMillis() - time));
 
-		// 1
+		// 并行化
 		time = System.currentTimeMillis();
-		new C6_6_WordCounting().countWordsParallel(new FileInputStream(new File(path)));
-		System.err.println("===========>use time2:" + (System.currentTimeMillis() - time));
+		countWordsParallel(new FileInputStream(new File(path)));
+		// System.err.println("=================> Parallel use time:" + (System.currentTimeMillis() - time));
 	}
 
-	private static final Pattern space = Pattern.compile("\\s+");
-
-	public void countWords(InputStream stream) {
+	private static void countWordsSerial(InputStream stream) {
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
 			Map<String, Long> counts = reader
 					.lines()
@@ -48,23 +49,23 @@ class C6_6_WordCounting {
 					.filter(word -> !word.isEmpty())
 					.collect(groupingBy(word -> word, counting()));
 
-			//counts.forEach((word, count) -> System.out.println(word + " -> " + count));
+			counts.forEach((word, count) -> System.out.println(word + " -> " + count));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void countWordsParallel(InputStream stream) {
+	private static void countWordsParallel(InputStream stream) {
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
 			Map<String, Long> counts = reader
 					.lines()
-					.parallel()
+					.parallel() // 并行化
 					.flatMap(space::splitAsStream)
 					.map(String::trim)
 					.filter(word -> !word.isEmpty())
 					.collect(groupingBy(word -> word, counting()));
 
-			//counts.forEach((word, count) -> System.out.println(word + " -> " + count));
+			counts.forEach((word, count) -> System.out.println(word + " -> " + count));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
