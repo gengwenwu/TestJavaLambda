@@ -18,21 +18,21 @@ import static java.util.stream.Collectors.toList;
 
 class C6_4_IntegerSum {
 
+	// 100万次
 	private static final int size = Integer.getInteger("sum.size", 1000000);
 
-	public int[] array;
-	public List<Integer> arrayList;
-	public LinkedList<Integer> linkedList;
-	public TreeSet<Integer> treeSet;
-	public HashSet<Integer> hashSet;
+	private int[] array;
+	private List<Integer> arrayList;
+	private LinkedList<Integer> linkedList;
+	private TreeSet<Integer> treeSet;
+	private HashSet<Integer> hashSet;
 
 	public static void main(String[] args) {
 		C6_4_IntegerSum instance = new C6_4_IntegerSum();
 		instance.createDataSources();
 	}
 
-
-	public void createDataSources() {
+	private void createDataSources() {
 		System.out.println("begin...");
 		long time = System.currentTimeMillis();
 		array = IntStream.range(0, size).toArray();
@@ -66,13 +66,11 @@ class C6_4_IntegerSum {
 		return arrayList.parallelStream().mapToInt(i -> i).sum();
 	}
 
-	// BEGIN addIntegers
 	private int addIntegers(List<Integer> values) {
 		return values.parallelStream()
 				.mapToInt(i -> i)
 				.sum();
 	}
-	// END addIntegers
 
 	public int linkedList() {
 		return linkedList.parallelStream().mapToInt(i -> i).sum();

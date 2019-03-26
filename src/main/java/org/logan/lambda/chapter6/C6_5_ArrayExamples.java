@@ -12,9 +12,9 @@ import java.util.stream.IntStream;
 class C6_5_ArrayExamples {
 
 	public static void main(String[] args) {
-		long time = System.currentTimeMillis();
+		//long time = System.currentTimeMillis();
 
-		int count = 100000000;
+		int count = 100000000; // 1亿次
 		imperativeInitilize(count);
 		parallelInitialize(count);
 
@@ -22,7 +22,7 @@ class C6_5_ArrayExamples {
 		//simpleMovingAverage(numbers, 6);
 	}
 
-	public static double[] imperativeInitilize(int size) {
+	private static double[] imperativeInitilize(int size) {
 		double[] values = new double[size];
 		for (int i = 0; i < values.length; i++) {
 			values[i] = i;
@@ -30,13 +30,11 @@ class C6_5_ArrayExamples {
 		return values;
 	}
 
-
-	public static double[] parallelInitialize(int size) {
+	private static double[] parallelInitialize(int size) {
 		double[] values = new double[size];
 		Arrays.parallelSetAll(values, i -> i);
 		return values;
 	}
-
 
 	public static double[] simpleMovingAverage(double[] values, int n) {
 		double[] sums = Arrays.copyOf(values, values.length); // <1>

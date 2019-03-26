@@ -32,7 +32,7 @@ class C6_1_StreamParallel {
 	/**
 	 * 所有专辑歌曲总长度 - 并行方式
 	 */
-	public static int parallelArraySum() {
+	private static int parallelArraySum() {
 		return SampleData.allAlbums
 				.parallelStream()
 				.flatMap(Album::getTracks)

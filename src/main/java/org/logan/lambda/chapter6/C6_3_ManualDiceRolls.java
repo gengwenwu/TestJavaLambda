@@ -11,7 +11,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * desc: 手动使用线程模拟掷骰子事件 <br/>
+ * desc: 手动使用线程模拟掷骰子 <br/>
  * time: 2019/3/23 下午9:16 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
