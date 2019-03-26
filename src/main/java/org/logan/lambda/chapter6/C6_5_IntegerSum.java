@@ -16,7 +16,7 @@ import static java.util.stream.Collectors.toList;
  * since V 1.0 <br/>
  */
 
-class C6_4_IntegerSum {
+class C6_5_IntegerSum {
 
 	// 100万次
 	private static final int size = Integer.getInteger("sum.size", 1000000);
@@ -28,7 +28,7 @@ class C6_4_IntegerSum {
 	private HashSet<Integer> hashSet;
 
 	public static void main(String[] args) {
-		C6_4_IntegerSum instance = new C6_4_IntegerSum();
+		C6_5_IntegerSum instance = new C6_5_IntegerSum();
 		instance.createDataSources();
 	}
 

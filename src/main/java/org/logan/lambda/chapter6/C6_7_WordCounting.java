@@ -19,7 +19,7 @@ import static java.util.stream.Collectors.groupingBy;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C6_6_WordCounting {
+class C6_7_WordCounting {
 
 	// 匹配空格
 	private static final Pattern space = Pattern.compile("\\s+");

@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C6_5_ArrayExamples {
+class C6_6_ArrayExamples {
 
 	public static void main(String[] args) {
 		//long time = System.currentTimeMillis();
