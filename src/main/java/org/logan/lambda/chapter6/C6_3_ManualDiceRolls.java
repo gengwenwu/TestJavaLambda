@@ -29,10 +29,8 @@ class C6_3_ManualDiceRolls {
 	public static void main(String[] args) {
 		C6_3_ManualDiceRolls roles = new C6_3_ManualDiceRolls();
 
-		System.out.println("serial begin...");
-		long time = System.currentTimeMillis();
-		roles.simulateDiceRoles();
-		System.out.println("serial end。==========> useTime:" + (System.currentTimeMillis() - time));
+		System.out.println("手动掷骰子 begin...");
+		C6_1_StreamParallel.recordMethodUsedTime("手动掷骰子", roles::simulateDiceRoles);
 	}
 
 	private C6_3_ManualDiceRolls() {
@@ -43,15 +41,11 @@ class C6_3_ManualDiceRolls {
 		workPerThread = N / numberOfThreads;
 	}
 
-	private void simulateDiceRoles() {
+	private int simulateDiceRoles() {
 		List<Future<?>> futures = submitJobs();
 		awaitCompletion(futures);
 		printResults();
-	}
-
-	private void printResults() {
-		results.entrySet()
-				.forEach(System.out::println);
+		return 0;
 	}
 
 	private List<Future<?>> submitJobs() {
@@ -94,6 +88,11 @@ class C6_3_ManualDiceRolls {
 			}
 		});
 		executor.shutdown();
+	}
+
+	private void printResults() {
+		results.entrySet()
+				.forEach(System.out::println);
 	}
 
 }

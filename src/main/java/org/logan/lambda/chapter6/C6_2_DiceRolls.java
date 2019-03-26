@@ -42,6 +42,7 @@ class C6_2_DiceRolls {
 		return IntStream.range(0, N)
 				.mapToObj(twoDiceThrows())
 				.collect(groupingBy(side -> side, summingDouble(n -> fraction)));
+		// todo  side ，n？
 	}
 
 	private static Map<Integer, Double> parallelDiceRolls() {
