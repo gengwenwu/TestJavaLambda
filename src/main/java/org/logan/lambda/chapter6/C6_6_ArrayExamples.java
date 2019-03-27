@@ -12,11 +12,10 @@ import java.util.stream.IntStream;
 class C6_6_ArrayExamples {
 
 	public static void main(String[] args) {
-		//long time = System.currentTimeMillis();
-
 		int count = 100000000; // 1亿次
-		imperativeInitilize(count);
-		parallelInitialize(count);
+
+		C6_1_StreamParallel.recordMethodUsedTime(" 串行 初始化数组", () -> imperativeInitilize(count));
+		C6_1_StreamParallel.recordMethodUsedTime(" 并行 初始化数组", () -> parallelInitialize(count));
 
 		// TODO: 2019/3/24  
 		//simpleMovingAverage(numbers, 6);
