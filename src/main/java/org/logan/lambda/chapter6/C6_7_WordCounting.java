@@ -25,7 +25,7 @@ class C6_7_WordCounting {
 	private static final Pattern space = Pattern.compile("\\s+");
 
 	public static void main(String[] args) throws FileNotFoundException {
-		// 23MB文件
+		// 大文件
 		String path = System.getProperty("user.dir") + "/resources/log2.txt";
 		System.err.println("====== begin.... ");
 
