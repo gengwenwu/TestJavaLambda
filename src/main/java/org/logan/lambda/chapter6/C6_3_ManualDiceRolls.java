@@ -18,6 +18,7 @@ import java.util.concurrent.ThreadLocalRandom;
  */
 class C6_3_ManualDiceRolls {
 
+	// 一亿次
 	private static final int N = 100000000;
 
 	private final double fraction;
