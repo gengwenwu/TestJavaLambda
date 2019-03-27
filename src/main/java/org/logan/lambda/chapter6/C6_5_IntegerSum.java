@@ -15,10 +15,9 @@ import static java.util.stream.Collectors.toList;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-
 class C6_5_IntegerSum {
 
-	// 100万次
+	// 1000万次
 	private static final int size = Integer.getInteger("sum.size", 10000000);
 
 	private int[] array;
@@ -29,13 +28,14 @@ class C6_5_IntegerSum {
 
 	public static void main(String[] args) {
 		C6_5_IntegerSum instance = new C6_5_IntegerSum();
+		// 初始化数据
 		instance.createDataSources();
-
-		// int 求和操作
-		instance.addIntegers(instance.arrayList);
 
 		// 不同数据源，串行、并行执行效率比较
 		instance.compareSerialParallel();
+
+		// int 求和操作
+		instance.addIntegers(instance.arrayList);
 	}
 
 	private void createDataSources() {
