@@ -40,7 +40,7 @@ class C6_1_StreamParallel {
 				.sum();
 	}
 
-	public static <T> void recordMethodUsedTime(String flag, Supplier<T> supplier) {
+	static <T> void recordMethodUsedTime(String flag, Supplier<T> supplier) {
 		long time = System.currentTimeMillis();
 		T t = supplier.get();
 		System.err.println("=======>" + flag + " -> :" + t + ", 运行时长:" + (System.currentTimeMillis() - time));

@@ -17,7 +17,6 @@ import static java.util.stream.Collectors.summingDouble;
  */
 
 class C6_2_DiceRolls {
-
 	private static final int N = 100000000;//一亿次
 
 	public static void main(String[] ignore) {
@@ -28,13 +27,6 @@ class C6_2_DiceRolls {
 
 		// 并行方式
 		rollDice("parallel", C6_2_DiceRolls::parallelDiceRolls);
-	}
-
-	private static void rollDice(String flag, Supplier<Map<Integer, Double>> supplier) {
-		System.out.println(flag + " begin...");
-		long time = System.currentTimeMillis();
-		print(supplier.get());
-		System.out.println(flag + " end。==========> useTime:" + (System.currentTimeMillis() - time));
 	}
 
 	private static Map<Integer, Double> serialDiceRolls() {
@@ -61,6 +53,13 @@ class C6_2_DiceRolls {
 			int secondThrow = random.nextInt(1, 7);
 			return firstThrow + secondThrow;
 		};
+	}
+
+	private static void rollDice(String flag, Supplier<Map<Integer, Double>> supplier) {
+		System.out.println(flag + " begin...");
+		long time = System.currentTimeMillis();
+		print(supplier.get());
+		System.out.println(flag + " end。==========> useTime:" + (System.currentTimeMillis() - time));
 	}
 
 	private static void print(Map<Integer, Double> map) {
