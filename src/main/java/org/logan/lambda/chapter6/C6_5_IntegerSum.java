@@ -19,7 +19,7 @@ import static java.util.stream.Collectors.toList;
 class C6_5_IntegerSum {
 
 	// 100万次
-	private static final int size = Integer.getInteger("sum.size", 1000000);
+	private static final int size = Integer.getInteger("sum.size", 10000000);
 
 	private int[] array;
 	private List<Integer> arrayList;
@@ -49,23 +49,28 @@ class C6_5_IntegerSum {
 	}
 
 	private void compareSerialParallel() {
-		/* 并行 */
-		C6_1_StreamParallel.recordMethodUsedTime("parallel sum IntStream.range", this::range);
-		C6_1_StreamParallel.recordMethodUsedTime("parallel sum array", this::array);
-		C6_1_StreamParallel.recordMethodUsedTime("parallel sum arrayList", this::arrayList);
-		C6_1_StreamParallel.recordMethodUsedTime("parallel sum linkedList", this::linkedList);
-		C6_1_StreamParallel.recordMethodUsedTime("parallel sum treeSet", this::treeSet);
-		C6_1_StreamParallel.recordMethodUsedTime("parallel sum hashSet", this::hashSet);
+		C6_1_StreamParallel.recordMethodUsedTime(" 串行 sum IntStream.range", this::serialRange);
+		C6_1_StreamParallel.recordMethodUsedTime(" 并行 sum IntStream.range", this::range);
 
 		System.err.println("");
+		C6_1_StreamParallel.recordMethodUsedTime(" 串行 sum array", this::serialArray);
+		C6_1_StreamParallel.recordMethodUsedTime(" 并行 sum array", this::array);
 
-			/* 串行 */
-		C6_1_StreamParallel.recordMethodUsedTime("serial sum IntStream.range", this::serialRange);
-		C6_1_StreamParallel.recordMethodUsedTime("serial sum array", this::serialArray);
-		C6_1_StreamParallel.recordMethodUsedTime("serial sum arrayList", this::serialArrayList);
-		C6_1_StreamParallel.recordMethodUsedTime("serial sum linkedList", this::serialLinkedList);
-		C6_1_StreamParallel.recordMethodUsedTime("serial sum treeSet", this::serialTreeSet);
-		C6_1_StreamParallel.recordMethodUsedTime("serial sum hashSet", this::serialHashSet);
+		System.err.println("");
+		C6_1_StreamParallel.recordMethodUsedTime(" 串行 sum arrayList", this::serialArrayList);
+		C6_1_StreamParallel.recordMethodUsedTime(" 并行 sum arrayList", this::arrayList);
+
+		System.err.println("");
+		C6_1_StreamParallel.recordMethodUsedTime(" 串行 sum treeSet", this::serialTreeSet);
+		C6_1_StreamParallel.recordMethodUsedTime(" 并行 sum treeSet", this::treeSet);
+
+		System.err.println("");
+		C6_1_StreamParallel.recordMethodUsedTime(" 串行 sum hashSet", this::serialHashSet);
+		C6_1_StreamParallel.recordMethodUsedTime(" 并行 sum hashSet", this::hashSet);
+
+		System.err.println("");
+		C6_1_StreamParallel.recordMethodUsedTime(" 串行 sum linkedList", this::serialLinkedList);
+		C6_1_StreamParallel.recordMethodUsedTime(" 并行 sum linkedList", this::linkedList);
 	}
 
 
