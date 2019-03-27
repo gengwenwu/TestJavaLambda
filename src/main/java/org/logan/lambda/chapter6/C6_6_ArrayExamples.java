@@ -12,13 +12,27 @@ import java.util.stream.IntStream;
 class C6_6_ArrayExamples {
 
 	public static void main(String[] args) {
-		int count = 100000000; // 1亿次
+		{
+			/* 串行、并行数组 赋值 测试*/
+			int count = 100000000; // 1亿次
 
-		C6_1_StreamParallel.recordMethodUsedTime(" 串行 初始化数组", () -> imperativeInitilize(count));
-		C6_1_StreamParallel.recordMethodUsedTime(" 并行 初始化数组", () -> parallelInitialize(count));
+			C6_1_StreamParallel.recordMethodUsedTime(" 串行 初始化数组", () -> imperativeInitilize(count));
+			C6_1_StreamParallel.recordMethodUsedTime(" 并行 初始化数组", () -> parallelInitialize(count));
+			System.err.println("");
+		}
 
-		// TODO: 2019/3/24  
-		//simpleMovingAverage(numbers, 6);
+
+		{
+			/* Arrays.parallelPrefix();  测试 */
+//			double[] numbers = {0, 1, 2, 3, 4, 3.5};
+//			double[] result = simpleMovingAverage(numbers, 3);
+//
+//			System.out.println("");
+//			for (double num : result) {
+//				System.out.print(num + " ");
+//			}
+		}
+
 	}
 
 	private static double[] imperativeInitilize(int size) {
@@ -31,17 +45,29 @@ class C6_6_ArrayExamples {
 
 	private static double[] parallelInitialize(int size) {
 		double[] values = new double[size];
-		Arrays.parallelSetAll(values, i -> i);
+		Arrays.parallelSetAll(values, i -> i); //使用这些方法要小心：它们改变了传入的数组，而没有创建一个新的数组。
 		return values;
 	}
 
-	public static double[] simpleMovingAverage(double[] values, int n) {
+	/**
+	 * 求滑动平均数
+	 *
+	 * @param n 滑动窗口
+	 */
+	private static double[] simpleMovingAverage(double[] values, int n) {
 		double[] sums = Arrays.copyOf(values, values.length); // <1>
-		Arrays.parallelPrefix(sums, Double::sum); // <2>
+		Arrays.parallelPrefix(sums, Double::sum); // <2> //改变了传入的数组，而没有创建一个新的数组。
+
+		for (double num : sums) {
+			System.out.print(num + " ");
+		}
+//		System.out.println("");
+
 		int start = n - 1;
 		return IntStream.range(start, sums.length) // <3>
 				.mapToDouble(i -> {
-					double prefix = i == start ? 0 : sums[i - n];
+					double prefix = (i == start) ? 0 : sums[i - n];
+					// System.out.println("i:" + i + ", start:" + start + ", prefix:" + prefix + ", i-n:" + (i - n));
 					return (sums[i] - prefix) / n; // <4>
 				})
 				.toArray(); // <5>
