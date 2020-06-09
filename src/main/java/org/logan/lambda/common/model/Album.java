@@ -26,6 +26,10 @@ public final class Album implements Performance {
 	private List<Artist> musicians;
 
 
+	public Album(String name) {
+		this.name = name;
+	}
+
 	public Album(String name, List<Track> tracks, List<Artist> musicians) {
 		this.name = name;
 		this.tracks = new ArrayList<>(tracks);
