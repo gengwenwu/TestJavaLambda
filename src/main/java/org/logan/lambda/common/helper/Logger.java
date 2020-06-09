@@ -16,6 +16,10 @@ public class Logger {
 	private boolean isDebug;
 
 
+	public Logger() {
+
+	}
+
 	public Logger(boolean isDebug) {
 		this.isDebug = isDebug;
 	}

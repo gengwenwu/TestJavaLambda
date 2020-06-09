@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class C4_1_UseLambda {
+public class C4_1_UseLambda {
 
 	private static Logger mLogger;
 
@@ -40,7 +40,7 @@ class C4_1_UseLambda {
 		mLogger.debug(() -> "Look at this:" + expensiveOperation());
 	}
 
-	private static String expensiveOperation() {
+	public static String expensiveOperation() {
 		try {
 			TimeUnit.SECONDS.sleep(1);
 		} catch (InterruptedException e) {
