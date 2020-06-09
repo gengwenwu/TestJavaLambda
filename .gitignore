@@ -4,3 +4,5 @@ src/.DS_Store
 /gradlew
 /gradlew.bat
 .idea/
+/build
+/.gradle
