@@ -17,7 +17,7 @@ import static org.logan.lambda.common.SampleData.allAlbums;
 class C7_6_OrderStream2 {
 
 	// 优化点：抽取公共代码，将业务代码作为参数
-	private long countFuture(ToLongFunction<Album> function) {
+	private long countFeature(ToLongFunction<Album> function) {
 		return allAlbums.stream()
 				.mapToLong(function)
 				.sum();
@@ -25,7 +25,7 @@ class C7_6_OrderStream2 {
 
 	// 统计所有歌曲播放时长
 	public long countRunningTime() {
-		return countFuture(album -> album.getTracks()
+		return countFeature(album -> album.getTracks()
 				.mapToLong(Track::getLength)
 				.sum()
 		);
@@ -33,12 +33,12 @@ class C7_6_OrderStream2 {
 
 	// 统计所有 音乐家数量
 	public long countMusicians() {
-		return countFuture(album -> album.getMusicianList().size());
+		return countFeature(album -> album.getMusicianList().size());
 	}
 
 	// 统计所有 歌曲数量
 	public long countTracks() {
-		return countFuture(album -> album.getTrackList().size());
+		return countFeature(album -> album.getTrackList().size());
 	}
 
 
