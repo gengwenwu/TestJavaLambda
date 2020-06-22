@@ -6,7 +6,7 @@ package org.logan.lambda.chapter8.command;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-public class EditorImpl implements Editor {
+public class EditorPrinter implements Editor {
 
 	@Override
 	public void save() {
@@ -19,8 +19,6 @@ public class EditorImpl implements Editor {
 	}
 
 	@Override
-	public void close() {
-		System.out.println("close");
-	}
+	public void close() { System.out.println("close"); }
 
 }

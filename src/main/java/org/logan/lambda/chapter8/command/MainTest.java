@@ -18,7 +18,7 @@ class MainTest {
 	// java 普通方式
 	private static void runByJavaNormal() {
 		Macro macro = new Macro();
-		Editor editor = new EditorImpl();
+		Editor editor = new EditorPrinter();
 
 		macro.record(new Open(editor));
 		macro.record(new Save(editor));
@@ -29,11 +29,12 @@ class MainTest {
 	// lambda方式
 	private static void runByLambda() {
 		Macro macro = new Macro();
-		Editor editor = new EditorImpl();
+		Editor editor = new EditorPrinter();
 
-		macro.record(editor::open);
-		macro.record(editor::save);
-		macro.record(editor::close);
+		macro.record(editor::open); // 可以不用写Open类了
+		macro.record(editor::save); // 可以不用写Save类了
+		macro.record(editor::close); // 可以不用写Close类了
+
 		macro.run();
 	}
 
