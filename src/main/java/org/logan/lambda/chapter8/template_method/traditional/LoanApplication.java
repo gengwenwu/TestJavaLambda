@@ -1,7 +1,7 @@
 package org.logan.lambda.chapter8.template_method.traditional;
 
 /**
- * desc: 模板方法模式描述申请贷款过程 <br/>
+ * desc: 模板方法模式 - 描述申请贷款过程 <br/>
  * time: 2020/6/22 6:18 下午 <br/>
  * author: Logan <br/>
  * since V 1.0 <br/>
