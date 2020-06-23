@@ -12,8 +12,7 @@ import static org.logan.lambda.chapter8.lambdabehave.Lets.describe;
  */
 public class StackSpec {
 
-
-	public static void main(String[] args) {
+	{ // 这里的大括号，相当于 public StackSpec() {...} 构造函数
 		describe("a stack", it -> {
 
 			it.should("be empty when created", expect -> {

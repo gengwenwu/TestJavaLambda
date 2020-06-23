@@ -45,18 +45,12 @@ public enum Runner {
 		);
 	}
 
-
-	public static void main(String[] args) {
-		current.run(StackSpec.class);
-		current.printReport();
-	}
-
-	private void printReport() {
+	public void printReport() {
 		ReportFormatter formatter = new ConsoleFormatter();
 		formatter.format(report);
 	}
 
-	private void run(Class<StackSpec> stackSpecClass) {
+	public void run(Class<StackSpec> stackSpecClass) {
 		try {
 			stackSpecClass.newInstance();
 		} catch (InstantiationException e) {
