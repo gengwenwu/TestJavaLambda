@@ -1,4 +1,4 @@
-package org.logan.lambda.chapter8.lambdabehave.principle;
+package org.logan.lambda.chapter8.principle;
 
 import java.util.stream.IntStream;
 
