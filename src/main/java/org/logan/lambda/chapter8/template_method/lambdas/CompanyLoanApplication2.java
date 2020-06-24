@@ -6,9 +6,9 @@ package org.logan.lambda.chapter8.template_method.lambdas;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class CompanyLoanApplication extends LoanApplication {
+public class CompanyLoanApplication2 extends LoanApplication {
 
-	public CompanyLoanApplication(Company company) {// 检查实现抽离到company中
+	public CompanyLoanApplication2(Company company) {// 检查实现抽离到company中
 		super(company::checkIdentity, // 函数引用
 				company::checkHistoricalDebt,
 				company::checkProfitAndLoss);

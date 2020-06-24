@@ -20,6 +20,7 @@ class MainTest {
 		runByLambda();
 	}
 
+	// java 普通方式
 	private static void runByJavaNormal() throws IOException {
 		Path inFile = Paths.get("");
 		File outFile = new File("");
@@ -33,16 +34,17 @@ class MainTest {
 		zipCompressor.compress(inFile, outFile);
 	}
 
+	// lambda 方式
 	private static void runByLambda() throws IOException {
 		Path inFile = Paths.get("");
 		File outFile = new File("");
 
 		// gzip
-		Compressor gzipCompressor = new Compressor(GZIPOutputStream::new); // 去掉GzipCompressionStrategy 实现类
+		Compressor gzipCompressor = new Compressor(GZIPOutputStream::new); // 不需要使用 GzipCompressionStrategy 实现类
 		gzipCompressor.compress(inFile, outFile);
 
 		// zip
-		Compressor zipCompressor = new Compressor(ZipOutputStream::new); // 去掉ZipCompressionStrategy 实现类
+		Compressor zipCompressor = new Compressor(ZipOutputStream::new); // 不需要使用 ZipCompressionStrategy 实现类
 		zipCompressor.compress(inFile, outFile);
 
 	}

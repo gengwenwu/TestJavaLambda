@@ -6,9 +6,9 @@ package org.logan.lambda.chapter8.template_method.lambdas;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class PersonalLoanApplication extends LoanApplication {
+public class PersonalLoanApplication2 extends LoanApplication {
 
-	public PersonalLoanApplication(Personal personal) {
+	public PersonalLoanApplication2(Personal personal) {
 		super(personal::checkIdentity,
 				personal::checkHistoricalDebt,
 				personal::checkProfitAndLoss);

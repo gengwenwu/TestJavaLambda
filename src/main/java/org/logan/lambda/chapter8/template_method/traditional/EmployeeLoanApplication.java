@@ -6,7 +6,7 @@ package org.logan.lambda.chapter8.template_method.traditional;
  * author: Logan <br/>
  * since V 1.0 <br/>
  */
-class EmployeeLoanApplication extends PersonalLoanApplication {
+public class EmployeeLoanApplication extends PersonalLoanApplication {
 
 	@Override
 	protected void checkIncomeHistory() {
