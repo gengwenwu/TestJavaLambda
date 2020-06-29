@@ -11,5 +11,5 @@ import org.logan.lambda.common.model.Album;
 
 public interface AlbumLookup {
 
-	Album lookupByName(String albumName) throws Exception;
+	Album lookupByName(String albumName);
 }
